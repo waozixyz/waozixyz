@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} - Waozi Writings</title>
+    <link rel="stylesheet" href="../style.css">
+    <meta name="description" content="{{DESC}}">
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .book {
+            background-color: #111;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 20px #00ff00;
+            position: relative;
+            overflow: hidden;
+        }
+        .book::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, #00ff00, transparent 10%, transparent 90%, #00ff00);
+        }
+        .book::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, #00ff00, transparent 10%, transparent 90%, #00ff00);
+        }
+        h1, h2 {
+            color: #ffff00;
+            text-align: center;
+            text-shadow: 2px 2px #008800;
+        }
+        .date, .tag {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+            border: 1px solid #00ff00;
+        }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 5px #00ffff;
+        }
+        .content {
+            text-align: justify;
+            padding: 20px;
+            border-top: 1px dashed #00ff00;
+            border-bottom: 1px dashed #00ff00;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <h1>{{TITLE}}</h1>
+        <p class="date">{{DATE}} - {{READTIME}}</p>
+        <img src="{{IMGSRC}}" alt="{{IMGALT}}">
+        <p class="tag">{{TAG}}</p>
+        <div class="content">
+            {{CONTENT}}
+        </div>
+        <a href="index.html" class="back-link">Back to Writings</a>
+    </div>
+</body>
+</html>

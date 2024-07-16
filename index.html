@@ -8,6 +8,9 @@
     <meta name="keywords" content="Waozi, Digital Tao, Martin Schiller, consciousness, collaborative tools, crypto experiments, digital philosophy">
     <meta name="author" content="Martin Schiller">
 
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
@@ -25,44 +28,6 @@
     <meta property="twitter:description" content="Explore Waozi, a digital reflection of consciousness. Discover tools for collective growth, crypto experiments, and philosophical musings.">
     <meta property="twitter:image" content="https://waozi.dev/twitter-image.jpg">
 
-    <style>
-        body {
-            background-color: #000;
-            color: #00ff00;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 14px;
-            line-height: 1.5;
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #ffff00;
-        }
-        a {
-            color: #00ffff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .blink {
-            animation: blinker 1s linear infinite;
-        }
-        @keyframes blinker {
-            50% {
-                opacity: 0;
-            }
-        }
-        .connect {
-            margin-top: 20px;
-            border-top: 1px dashed #00ff00;
-            padding-top: 20px;
-        }
-        .connect pre {
-            display: inline-block;
-            margin-right: 20px;
-            vertical-align: top;
-        }
-    </style>
 
 </head>
 <body>
@@ -75,24 +40,61 @@
     </pre>
     <h1>W A O Z I</h1>
     <p id="blinker" class="blink"></p><p>Welcome, fellow traveler. You've encountered Waozi - a bubble in the vast digital ocean of consciousness.</p>
-    
     <h2>Ripples:</h2>
-    <ul>
-        <li><a href="https://naox.io">naox.io</a> - Digital tools for collective growth
-            <ul>
-                <li><a href="https://ukuvota.world">ukuvota.world</a> - Collaborative score voting tool</li>
-                <li><a href="https://inner-breeze.app">inner-breeze.app</a> - Wim Hof meditation tracker</li>
-            </ul>
-        </li>
-        <li><a href="https://alpega.github.io">alpega.github.io</a> - Crypto experiments & playful projects</li>
-        <li><a href="#">writings</a> - Thoughts adrift in the digital sea
-            <ul>
-                <li><a href="#">clingy-tree</a> - Letting go (2020)</li>
-                <li><a href="#">the-micronation</a> - Imagining new societies (Upcoming)</li>
-            </ul>
-        </li>
-    </ul>
+    <div class="ripples">
+        <section class="naox-apps">
+            <h3>NaoX - Digital Tools for Collective Growth</h3>
+            <div class="app-grid">
+                <div class="app-card">
+                    <h4><a href="https://inner-breeze.app">Inner Breeze</a></h4>
+                    <p class="app-meta">Wim Hof Breathing Method</p>
+                    <p class="app-excerpt">Find serenity in every breath with guided meditation...</p>
+                </div>
+                <div class="app-card">
+                    <h4><a href="https://ukuvota.world">Ukuvota</a></h4>
+                    <p class="app-meta">Weighted Score Voting</p>
+                    <p class="app-excerpt">Empower precise, consensus-driven decision making...</p>
+                </div>
+            </div>
+            <a href="https://naox.io/" class="more-btn">More Apps</a>
 
+        </section>
+        
+        <section class="alpega-projects">
+            <h3>Alpega - Crypto & Playful Projects</h3>
+            <div class="app-grid">
+                <div class="app-card">
+                    <h4><a href="https://geocats.netlify.app">Geocats</a></h4>
+                    <p class="app-meta">Retro-style 2D Action Platformer</p>
+                    <p class="app-excerpt">Join the Geocats in their quest to restore peace to Geoterra...</p>
+                </div>
+                <div class="app-card">
+                    <h4><a href="https://pixelflux.io/">Pixelflux</a></h4>
+                    <p class="app-meta">Pixel Ownership Game</p>
+                    <p class="app-excerpt">Claim, customize, and trade pixel layers in this unique blockchain game...</p>
+                </div>
+            </div>
+            <a href="https://alpega.github.io/" class="more-btn">More Games</a>
+
+        </section>
+
+        <section class="writings">
+            <h3>Writings - Thoughts Adrift in the Digital Sea</h3>
+            <div class="writing-grid">
+                <div class="writing-card">
+                    <h4><a href="writings/clingy-tree.html">Clingy Tree</a></h4>
+                    <p class="writing-meta">Letting go (2020)</p>
+                    <p class="writing-excerpt">Explore the metaphor of a clingy tree and learn to let go of attachments...</p>
+                </div>
+                <div class="writing-card">
+                    <h4><a href="writings/the-micronation.html">The Micronation</a></h4>
+                    <p class="writing-meta">Imagining new societies (Upcoming)</p>
+                    <p class="writing-excerpt">A journey into the concept of micronations and alternative social structures...</p>
+                </div>
+            </div>
+            <a href="writings/" class="more-btn">More Writings</a>
+        </section>
+    </div>
     <p>We are but fleeting patterns in the endless flow of the Tao. Waozi simply is, as are we all.</p>
 
     <p id="quote"></p>

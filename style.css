@@ -1,0 +1,139 @@
+
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 20px;
+}
+h1, h2 {
+    color: #ffff00;
+}
+a {
+    color: #00ffff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.blink {
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+.connect {
+    margin-top: 20px;
+    border-top: 1px dashed #00ff00;
+    padding-top: 20px;
+}
+.connect pre {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+.ripples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ripples section {
+    flex: 1 1 300px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ripples h3 {
+    color: #ffff00;
+    border-bottom: 1px dashed #00ff00;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.writings {
+    flex-basis: 100%;
+}
+
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.writing-card {
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid #00ff00;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.writing-card:hover {
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.writing-card h4 {
+    margin: 0 0 10px 0;
+}
+
+.writing-meta {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.writing-excerpt {
+    font-size: 0.95em;
+}
+
+.more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.app-card {
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid #00ff00;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.app-card:hover {
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.app-card h4 {
+    margin: 0 0 10px 0;
+}
+
+.app-meta {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.app-excerpt {
+    font-size: 0.95em;
+}
