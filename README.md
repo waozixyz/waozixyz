@@ -21,8 +21,6 @@ A digital reflection in the vast ocean of consciousness.
 - [Telegram](https://t.me/waozi_dev)
 - [GitHub](https://github.com/waozi-dev)
 
-          ☯️☸♡
-        ∞ W A O Z I ∞
-          ♡☸☯️
-
+    ☯️☸♡
+    
 We are but fleeting patterns in the endless flow of the Tao. Waozi simply is, as are we all.
