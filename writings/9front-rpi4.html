@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring 9front on my RPi4 - Waozi Writings</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <meta name="description" content="My experience to setting up and customizing 9front, a fork of Plan 9, on a Raspberry Pi 4.">
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .book {
+            background-color: #111;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 20px #00ff00;
+            position: relative;
+            overflow: hidden;
+        }
+        .book::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, #00ff00, transparent 10%, transparent 90%, #00ff00);
+        }
+        .book::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, #00ff00, transparent 10%, transparent 90%, #00ff00);
+        }
+        h1, h2 {
+            color: #ffff00;
+            text-align: center;
+            text-shadow: 2px 2px #008800;
+        }
+        .date, .tag {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+            border: 1px solid #00ff00;
+        }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 5px #00ffff;
+        }
+        .content {
+            text-align: justify;
+            padding: 20px;
+            border-top: 1px dashed #00ff00;
+            border-bottom: 1px dashed #00ff00;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <h1>Exploring 9front on my RPi4</h1>
+        <p class="date">Apr 22, 2022 - 2 min read</p>
+        <img src="/assets/glenda_space.png" alt="Glenda Space">
+        <p class="category">technology</p>
+        <div class="content">
+            <h1>Exploring <a href="http://9fs.net/">9front</a> on my Raspberry Pi 4</h1>
+<ul>
+<li>profile file = $home/lib/profile</li>
+<li>riostart file = $home/rc/bin/riostart</li>
+</ul>
+<h2>Add permanent keyboard layout change</h2>
+<p>Simply add this line with the kbmap you want to use to your profile file in the terminal case:</p>
+<blockquote>
+<p>cat /sys/lib/kbmap/dvorak &gt; /dev/kbmap</p>
+</blockquote>
+<h2>Sync time automatically at start</h2>
+<p>Just add this line to the profile file in the terminal case:</p>
+<blockquote>
+<p>aux/timesync -n pool.ntp.org</p>
+</blockquote>
+<p><a href="https://web.archive.org/web/20230321233918/https://clueelf.wordpress.com/2018/06/29/clocks-time-ntp-plan9-9front/">source</a></p>
+<h2>Fix &quot;buggy&quot; spawned terminal</h2>
+<p>In your riostart file ($profile/bin/rc) simply remove the following line:</p>
+<blockquote>
+<p>; ~ $#console 0 || window -scroll console</p>
+</blockquote>
+<p>and replace it with:</p>
+<blockquote>
+<p>window -scroll</p>
+</blockquote>
+<h2>Fixing the background</h2>
+<p>First of all, make sure to follow this <a href="http://www.ftrv.se/14">tutorial</a> to get the theme patch on rio working.</p>
+<p>(If by accident you run the patch twice then you will get a lot of errors and you need to reset the hg tree and get the original rio files again)</p>
+<p>Once you got themes working go to:</p>
+<blockquote>
+<p>cd /sys/src/cmd/rio</p>
+</blockquote>
+<blockquote>
+<p>acme rio.c</p>
+</blockquote>
+<p>and simply follow the short guide to my rio background fix:</p>
+<blockquote>
+<p><a href="/assets/rio-background-fix.txt">rio-background-fix</a></p>
+</blockquote>
+<p>For some reason the background is buggy until the rio window is resized, so the &quot;bug fix&quot; I made is just a stripped down version of the resized function in rio.c and I put it in redraw to execute it once since I did not know where else to put it to make sure it is run once at the start.</p>
+<p>After the code has been fixed make sure to run mk and if no bugs were encountered run:</p>
+<blockquote>
+<p>mk install</p>
+</blockquote>
+<h2>werc</h2>
+<p>This <a href="http://docs.a-b.xyz/rc-httpd-werc.html">tutorial</a> is great. I was just confused on how to start the listener. Running this line fixed the problem:</p>
+<blockquote>
+<p>aux/listen</p>
+</blockquote>
+<p>To get the web server working and I also struggled at first to comprehend how to use the sites directory.</p>
+<p>Simply make a folder with your local ip such as 192.168.0.2 and you can use it immediately with werc if everything is set up correctly.</p>
+<p>You can also set up a loopback to use other local folders in the sites directory such as 127.0.0.1 or localhost:</p>
+<blockquote>
+<p>ip/ipconfig loopback add 127.0.0.1</p>
+</blockquote>
+<h2>Useful links</h2>
+<ul>
+<li><a href="http://doc.cat-v.org/plan_9/4th_edition/papers/rc">Rc - The Plan 9 Shell</a></li>
+<li><a href="https://luksamuk.codes/posts/plan9-setup-rpi.html#org495babf">Setup CPU Server on RPI</a></li>
+<li><a href="http://fqa.9front.org/fqa8.html#8.6.1">9front FQA</a></li>
+<li><a href="https://plan9docs.wordpress.com/2012/05/08/getting-getting-contributed-packages-installed-on-plan9">Contrib package manager</a></li>
+</ul>
+
+        </div>
+        <a href="index.html" class="back-link">Back to Writings</a>
+    </div>
+</body>
+</html>

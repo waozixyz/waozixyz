@@ -46,6 +46,15 @@ local function extract_yaml_and_content(file_content)
     end
 end
 
+local function parse_date(date_str)
+    local months = {Jan=1, Feb=2, Mar=3, Apr=4, May=5, Jun=6, Jul=7, Aug=8, Sep=9, Oct=10, Nov=11, Dec=12}
+    local month, day, year = date_str:match("(%a+)%s+(%d+),%s+(%d+)")
+    if month and day and year then
+        return os.time({year=tonumber(year), month=months[month], day=tonumber(day)})
+    end
+    return 0  -- Return 0 if parsing fails
+end
+
 local template = read_file(template_file)
 
 -- Table to store writing summaries
@@ -93,8 +102,10 @@ end
 
 
 
--- Sort writings by date (assuming date is in a sortable format)
-table.sort(writings, function(a, b) return a.date > b.date end)
+-- Sort writings by date
+table.sort(writings, function(a, b) 
+    return parse_date(a.date) > parse_date(b.date)
+end)
 
 -- Generate HTML for the writing section
 local writing_section = [[
@@ -103,22 +114,17 @@ local writing_section = [[
     <div class="writing-grid">
 ]]
 
--- Add up to 3 most recent writings
-do 
-    i = #writings
-    while i > #writings - max_writings do
-        local writing = writings[i]
-        writing_section = writing_section .. string.format([[
-            <div class="writing-card">
-                <h4><a href="writings/%s">%s</a></h4>
-                <p class="writing-meta">Published: %s | %s</p>
-                <p class="writing-excerpt">%s</p>
-            </div>
-        ]], writing.link, writing.title, writing.date, writing.readTime, writing.desc)
-        i = i - 1
-    end
+-- Add up to max_writings most recent writings
+for i = 1, math.min(max_writings, #writings) do
+    local writing = writings[i]
+    writing_section = writing_section .. string.format([[
+        <div class="writing-card">
+            <h4><a href="writings/%s">%s</a></h4>
+            <p class="writing-meta">Published: %s | %s</p>
+            <p class="writing-excerpt">%s</p>
+        </div>
+    ]], writing.link, writing.title, writing.date, writing.readTime, writing.desc)
 end
-
 
 writing_section = writing_section .. [[
     </div>
@@ -154,15 +160,12 @@ local writings_index = [[
     <ul>
 ]]
 
-do 
-    i = #writings
-    while i > 0 do
-        local writing = writings[i]
-        writings_index = writings_index .. string.format([[
-            <li><a href="%s">%s</a> - %s</li>
-        ]], writing.link, writing.title, writing.date)
-        i = i - 1
-    end
+-- Add all writings to the index (newest first)
+for i = 1, #writings do
+    local writing = writings[i]
+    writings_index = writings_index .. string.format([[
+        <li><a href="%s">%s</a> - %s</li>
+    ]], writing.link, writing.title, writing.date)
 end
 
 writings_index = writings_index .. [[
