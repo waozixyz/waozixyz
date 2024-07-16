@@ -4,6 +4,9 @@ local yaml = require "lyaml"
 local markdown_dir = "writings/markdown"
 local html_dir = "writings"
 local template_file = "template.html"
+local index_file = "index.html"
+local max_writings = 2
+
 
 -- Read the template file
 local function read_file(path)
@@ -45,21 +48,8 @@ end
 
 local template = read_file(template_file)
 
--- Prepare the index file
-local index_content = [[
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waozi Writings - Digital Reflections</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <h1>Waozi Writings</h1>
-    <p>Thoughts adrift in the digital sea</p>
-    <ul>
-]]
+-- Table to store writing summaries
+local writings = {}
 
 -- Process each Markdown file
 for file in lfs.dir(markdown_dir) do
@@ -88,21 +78,101 @@ for file in lfs.dir(markdown_dir) do
             -- Write the HTML file
             write_file(html_path, page_content)
             
-            -- Add to index
-            index_content = index_content .. string.format('        <li><a href="%s">%s</a> - %s</li>\n', 
-                                                           file:gsub("%.md$", ".html"), metadata.title, metadata.date)
+            -- Store writing summary
+            table.insert(writings, {
+                title = metadata.title,
+                date = metadata.date,
+                excerpt = metadata.excerpt or "",
+                desc = metadata.desc or "",
+                readTime = metadata.readTime or "",
+                link = file:gsub("%.md$", ".html")
+            })
         end
     end
 end
 
--- Finish and write the index file
-index_content = index_content .. [[
+
+
+-- Sort writings by date (assuming date is in a sortable format)
+table.sort(writings, function(a, b) return a.date > b.date end)
+
+-- Generate HTML for the writing section
+local writing_section = [[
+<section class="writings">
+    <h3>Writings - Thoughts Adrift in the Digital Sea</h3>
+    <div class="writing-grid">
+]]
+
+-- Add up to 3 most recent writings
+do 
+    i = #writings
+    while i > #writings - max_writings do
+        local writing = writings[i]
+        writing_section = writing_section .. string.format([[
+            <div class="writing-card">
+                <h4><a href="writings/%s">%s</a></h4>
+                <p class="writing-meta">Published: %s | %s</p>
+                <p class="writing-excerpt">%s</p>
+            </div>
+        ]], writing.link, writing.title, writing.date, writing.readTime, writing.desc)
+        i = i - 1
+    end
+end
+
+
+writing_section = writing_section .. [[
+    </div>
+    <a href="writings/" class="more-btn">More Writings</a>
+</section>
+]]
+
+-- Read the main index.html file
+local index_content = read_file(index_file)
+
+-- Replace the entire writings section
+index_content = index_content:gsub('<section class="writings">.-</section>', writing_section)
+
+-- Write the updated index.html file
+write_file(index_file, index_content)
+
+
+
+-- Generate the writings index page
+local writings_index = [[
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waozi Writings - Digital Reflections</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+    <h1>Waozi Writings</h1>
+    <p>Thoughts adrift in the digital sea</p>
+    <ul>
+]]
+
+do 
+    i = #writings
+    while i > 0 do
+        local writing = writings[i]
+        writings_index = writings_index .. string.format([[
+            <li><a href="%s">%s</a> - %s</li>
+        ]], writing.link, writing.title, writing.date)
+        i = i - 1
+    end
+end
+
+writings_index = writings_index .. [[
     </ul>
     <a href="../index.html">Back to Waozi</a>
 </body>
 </html>
 ]]
 
-write_file(html_dir .. "/index.html", index_content)
+-- Write the writings index page
+write_file(html_dir .. "/index.html", writings_index)
 
 print("Site generation complete.")

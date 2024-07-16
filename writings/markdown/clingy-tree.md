@@ -1,13 +1,11 @@
 ---
 imgSrc: "/assets/clingy_tree.jpg"
 imgAlt: "Clingy Tree"
-tag: "philosophy"
+category: "philosophy"
 title: "Clingy Tree"
-desc: "He was in his early 20s when he met the clingy tree. Everything about this tree seemed perfectly normal. The tree had roots, a stem, branches, leaves and in summer, it had bright red fruits..."
+desc: "Explore the metaphor of a clingy tree and learn to let go of attachments..."
 date: "Sep 29, 2020"
 readTime: "2 min read"
-url: "/blog/clingy-tree"
-contentFile: "clingy-tree.md"
 ---
 Once upon a time there was a young man, who traveled the world. He was in his early 20s when he met the clingy tree. Everything about this tree seemed perfectly normal. The tree had roots, a stem, branches, leaves and in summer, it had bright red fruits. Filling the scene with vivid colors.
 

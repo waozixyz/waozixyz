@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technological Privacy Crises - Waozi Writings</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <meta name="description" content="Let me just make a TikTok quickly, OMG look at the food here - I gotta post it on Instagram. Wow everything is backed up automatically on the cloud. Thank you Google. I will trust you forever~">
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .book {
+            background-color: #111;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 20px #00ff00;
+            position: relative;
+            overflow: hidden;
+        }
+        .book::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, #00ff00, transparent 10%, transparent 90%, #00ff00);
+        }
+        .book::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, #00ff00, transparent 10%, transparent 90%, #00ff00);
+        }
+        h1, h2 {
+            color: #ffff00;
+            text-align: center;
+            text-shadow: 2px 2px #008800;
+        }
+        .date, .tag {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+            border: 1px solid #00ff00;
+        }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 5px #00ffff;
+        }
+        .content {
+            text-align: justify;
+            padding: 20px;
+            border-top: 1px dashed #00ff00;
+            border-bottom: 1px dashed #00ff00;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <h1>Technological Privacy Crises</h1>
+        <p class="date">Jun 2, 2023 - 14 min read</p>
+        <img src="/assets/technology_crisis.jpg" alt="Technological Privacy Crises">
+        <p class="category">technology</p>
+        <div class="content">
+            <h1>Going Down the Rabbit Hole...</h1>
+<p>When you start digging deeper into how each layer of our everyday technology functions, it might shock you that there are multiple opportunities for the government and big companies to integrate a backdoor that give them unrestricted access to your data, or simple trackers that monitor your everyday move.</p>
+<p>I used to reject most apps and platforms if I could not see the source code. The reason being that whenever we use proprietary software, which could even be as simple as a driver for a LED keyboard we give up the ability to see what is going on inside our device and we most likely give up some of our privacy.</p>
+<p>Most proprietary software comes with trackers that will log certain information and metadata about you.</p>
+<p>When applications make a claim that they use &quot;end-to-end encryption&quot; but the frontend source code is not available there is no way for experts to check if they are actually using military grade encryption and they they have not implemented a backdoor to access your information.</p>
+<p>Frontend source code is the software running on your device, and it is the part that would be responsible for any end-to-end encryption. The other part of the software is the backend software, which is run on a server.</p>
+<h2>Governments love your data...</h2>
+<p>Edward Snowden is known for releasing a lot of confidential information about how the NSA operates and has made the public aware of <a href="https://en.wikipedia.org/wiki/PRISM">PRISM</a>, a program with the entire purpose of collecting all kinds of data about its citizens.</p>
+<p>More recently we also have the <a href="https://jordansather.substack.com/p/running-list-of-all-twitter-files">Twitter files</a> revealing how close the government actually works with big tech giants. The first step for more privacy is to get informed, about what is actually happening in the tech world and what alternatives are out there.</p>
+<p>Data is money and power. The more you can hoard, the more powerful you can become.</p>
+<p>We only need to look at China to see what a society could become when we let the governments have unrestricted access to our data. With social credit systems and no privacy for their citizens the list of terrifying things happening in that continent are endless.</p>
+<p>We have people getting <a href="https://twitter.com/clipsthatgohard/status/1662473734949851136?s=20">arrested</a> who simply complain about some bad behavior from a police officer in a &quot;private&quot; group chat.</p>
+<p>You are not allowed to disobey. You must cohere with those above you. You are just an animal in a open prison system in that society.</p>
+<p>We know we wouldn't like to live in a society with such restrictions on freedom. Yet the west seems to be heading down the same path as China!</p>
+<p>With new surveillance programs and laws limiting freedom of speech, punishing those who speak up against the narrative.</p>
+<p>If the data is not in our secure hands and you are not inline with whatever the most powerful individuals want you to believe and say, then that data will be used against you!</p>
+<h2>Not even your hardware is safe</h2>
+<p>There are many layers to this problem, including the core part of what makes computing even possible.</p>
+<p>For example all modern Intel CPU chips are running another operating system called <a href="https://itsfoss.com/fact-intel-minix-case/">Minix</a> which can auto update and has access to your RAM and CPU, while at the same time remaining completely inaccessible to the user.</p>
+<p>Even <a href="https://www.wired.com/story/gigabyte-motherboard-firmware-backdoor/">motherboards</a> can come with a build-in backdoor, it is hard to know what hardware we can trust if the schematics are not open to the public. And thus this issue to become more private and secure because a lot deeper than simply switching the software we use in our everyday life.</p>
+<p>In this article however I will be focusing on the software part and not hardware. Even if there are many layers to this problem, simply removing some of the data vulnerability is already a grand step to reaching more privacy.</p>
+<p>Below I have devised a comprehensive list of software tools of everyday applications that I find extremely useful to protect my data.</p>
+<p><img src="/assets/cyborg_love.jpg" alt="Cyborg Love"></p>
+<h1>Improving your data sovereignty.</h1>
+<p>Finding alternatives to our everyday tools can be time consuming and can require deeper technological knowledge to evaluate what a good alternative needs to have. I have invested hundreds of hours to find the best applications that will give you more data privacy and sovereignty.</p>
+<h2>Desktop OS</h2>
+<p>Windows comes with preinstalled trackers and spyware, sending data about your usage daily to windows servers. It is possible to remove all of those windows applications such as by installing <a href="https://atlasos.net/">AtlasOS</a> which would in theory give you more privacy.</p>
+<p>However you will also loose all the security updates and features, making the system easier to hack and if not used careful it could become infested by viruses and other spyware.</p>
+<p>MacOS might appear as a more secure and private alternative. However MacOS has similar issues as Windows regarding privacy. The firmware and the software is proprietary and might very well have a backdoor installed for the government.</p>
+<p>You will forced to rely on MacOS updates to stay secure from hackers, yet at any point it time it could also be used to install spyware from Apple that could compromise your privacy.</p>
+<p>This can happen for various reasons and since the Apple updates are not transparent and a lot of the software is proprietary it is a real possibility that this might happen.</p>
+<p>Thus if you truly want to switch to a more private and secure desktop system you will need to invest time and energy in learning to use a Linux distributions.</p>
+<h3>Linux</h3>
+<p>You can install a second operating system on your laptop or desktop and dual boot with Linux, this will allow you to switch back and forth and take small steps to familiarize with the new environment.</p>
+<p>Most servers that keep the internet alive today run Linux, it is one of the most secure systems to use while also respecting your Privacy.</p>
+<p>There are many different flavors of Linux distributions (distros), there are a few main distributions which most other variations are based on. Here are a few of my recommendations depending on what your needs are.</p>
+<ul>
+<li><p>for beginners: <a href="https://linuxmint.com/">Linux Mint</a></p>
+</li>
+<li><p>for business: <a href="https://www.opensuse.org/">openSUSE</a></p>
+</li>
+<li><p>for security: <a href="https://www.qubes-os.org/">QubesOS</a></p>
+</li>
+<li><p>for stability: <a href="https://www.debian.org/">Debian</a></p>
+</li>
+</ul>
+<p>Linux Mint is great for beginners, especially if you are coming from Windows and you want to have something familiar. OpenSUSE is great for your business, they have enterprise support and have an overall decent operating system.</p>
+<p>QubesOS is the go to if security and privacy is your number one concern. It works my running applications in seperate containers, thus you can limit which applications have access to the internet and which don't. It is a lot more complex than that, so I recommend watching some videos and tutorials before installing it to actually understand of it works.</p>
+<p>Debian is the classic distributions for stability. The applications can sometimes be outdated as the main priority for them is to have a distribution that works and nothing breaks. It is great for servers, but also for other people who do not want their system to break.</p>
+<h2>Mobile OS</h2>
+<p>On Mobile the world looks a little bit different. In general Mobile systems are more secure than a Desktop OS, with applications needing to request permission to access your sensors and data your privacy is safer.</p>
+<p>There are still some vital flaws that need to be taken into consideration.</p>
+<p>First of all, I will just say it clear as day. If you are running iOS try to switch to Android.</p>
+<p>Russia <a href="https://www.reuters.com/world/europe/kremlin-tells-officials-stop-using-iphones-kommersant-newspaper-2023-03-20/">claims</a> that iPhone's have a backdoor that sends information the CIA, thus any applications no matter how secure will still leak data to certain governmental organization.</p>
+<p>Apple devices might be quite secure from third party trackers and other spyware, but you are not safe from Apple itself, they have full control over your device and could do whatever they want. You do not truly own your device.</p>
+<h3>Android</h3>
+<p>Android devices can also come with a backdoor made by the manufacturer, and it is hard to know what you can truly trust. We can try to increase our privacy by installing a custom ROM on our device such as <a href="https://lineageos.org/">LineageOS</a> and <a href="https://grapheneos.org/">GrapheneOS</a>.</p>
+<p>Android by default comes preloaded with many proprietary application which cannot be uninstalled unless you flash a custom ROM.</p>
+<p>Google has managed to create an ecosystem around google play services. Getting rid of it will make some applications not work anymore.</p>
+<p>This is how Google tries to stay in control of their otherwise free and open source operating system. It can be a tedious job to try to make your Android device truly private.</p>
+<p>If privacy and security is your NO. 1 concern, I would recommend you to get a Google Pixel device and install <a href="https://grapheneos.org/">GrapheneOS</a>.</p>
+<p>If you want to learn more about GrapheneOS you can watching <a href="https://www.youtube.com/watch?v=xIXAzA555xk">this</a> video by The Hated One.</p>
+<p>On most other devices you can try to unlock the bootloader and install LineageOS.</p>
+<p>This will give you more freedom over your device and let you choose if you want to have Google apps or not.</p>
+<p>There are a few manufacturers that let you easily install a custom ROM.</p>
+<p>If you are looking to buy a new device that can probably be trusted to not have a malicious backdoor I would recommend taking a look at the <a href="https://shop.fairphone.com/">Fairphone</a> and the <a href="https://www.shiftphones.com/en/">Shiftphone</a>.</p>
+<h3>Privacy Respecting Apps for Android</h3>
+<p>Reaching more privacy is not easy, but there are many great tools on Android that you can use to make your life a little bit more private. Below are a few of my favorite privacy respecting applications for Android.</p>
+<ul>
+<li><a href="https://f-droid.org/en/">F-droid</a></li>
+<li><a href="https://newpipe.net/">NewPipe</a></li>
+<li><a href="https://www.simplemobiletools.com/">Simple Mobile Tools</a></li>
+<li><a href="https://adaway.org/">AdAway</a></li>
+</ul>
+<p>F-droid is an alternative app store with only open source tools, no spyware, no tracking, just applications you can trust</p>
+<p>NewPipe is an alternative front-end to YouTube allowing you to listen to music in the background or download any video while not having to watch any adverts.</p>
+<p>Simple Mobile Tools is a collection of standard applications that are fully open source and do not have any trackers.</p>
+<p>AdAway allows you to block advertisements on your device, either by using a local VPN to redirect traffic or by changing the hosts file if you have <a href="https://en.wikipedia.org/wiki/Rooting_(Android)">root</a> access.</p>
+<h2>Web Browser</h2>
+<p>The web browser is arguably the most important piece of software on your device, giving you access to a near infinite pool of information.</p>
+<p>With most people using Chrome we lean into the convenience of Google taking care of all our passwords, browser history and searches we make.</p>
+<p>However there are great alternatives that will give you the modern browsing experience while respecting your privacy. My number one choice is <a href="https://brave.com/">Brave</a>.</p>
+<p>I have used it for years. I love that it blocks the cookie consent forms and that it has an inbuilt ad-block. It is based on chromium which is the open source layer powering Chrome, with added functionality and protection.</p>
+<p>At <a href="https://privacytests.org/">PrivacyTests.org</a> we can view what browser has the best privacy protection. <a href="https://librewolf.net/">LibreWolf</a> and the <a href="https://mullvad.net/en">Mullvad Browser</a> are two other great options if you prefer a Firefox based browser.</p>
+<p>No matter what browser you choose, I highly recommend getting <a href="https://ublockorigin.com/">uBlock Origin</a>, as it is the best extension to block trackers and remove advertisements.</p>
+<h2>VPN or Tor</h2>
+<p>I get a lot of people asking me about VPNs. I gotta tell you, most of these sponsored VPNs on YouTube are most likely untrustworthy and probably still log some of your data.</p>
+<p>In fact most popular VPNs are owned by a <a href="https://vpnpro.com/blog/hidden-vpn-owners-unveiled-97-vpns-23-companies/">few</a> companies.</p>
+<p>For example ExpressVPN, CyberGhost VPN and Private Internet Access (PIA) are all owned by Kape Technology. Before they changed their name, the company would inject code into the users devices to track information...</p>
+<p>They also own a lot of the review sites for VPNs so of course they give a great rating to all their products...</p>
+<p>The whole idea of VPNs is to hide traffic from the Internet Service Provider, and to not have your internet tracked.</p>
+<p>I am not an expert in what VPN you should use or which one can be trusted. I think <a href="https://mullvad.net/en">Mullvad VPN</a> might be a good option.</p>
+<p>In either case, if you must hide your internet traffic, you will need to download the <a href="https://www.torproject.org/">Tor Browser</a> to access the tor network. It is probably the safest method to hide your IP address if that is what you need to do, however it will come at the cost of performance.</p>
+<h2>E-mail</h2>
+<p>Most of us use Gmail, Yahoo or Outlook. None of these give you any privacy. All the data is accessible by the Companies, the NSA and other governmental organizations.</p>
+<p>Currently one great alternative to these email providers while also providing great security and encryption seems to be <a href="https://proton.me/">Protonmail</a>. The UI is great and pricing scheme is reasonable to get all the features you need.</p>
+<p>If Proton is not to your liking here are a few more interesting alternative e-mail providers:</p>
+<ul>
+<li><a href="https://tutanota.com/">Tutanota</a></li>
+<li><a href="https://disroot.org/">Disroot</a></li>
+<li><a href="https://skiff.com/mail">Skiff</a></li>
+</ul>
+<h2>Cloud Storage</h2>
+<p>A lot of business and individuals use Google Drive and OneDrive. And it is hard to find an alternative that as convenient.</p>
+<p>The closest I have come across is <a href="https://nextcloud.com/">Nextcloud</a>. It is fully open source and you can use it by finding an existing <a href="https://nextcloud.com/providers/">provider</a> or self hosting it entirely on your own server.</p>
+<p>With <a href="https://apps.nextcloud.com/apps/richdocuments">Nextcloud Office</a> you will be able to share documents and edit them directly in the web browser. This can give you full control over your own data</p>
+<h2>Photos</h2>
+<p>Do you enjoy the convenience of backing up all your photos to the iCloud or Google Photos and being able to access them anywhere? Great, I love it too. And that is why I use ente Photos.</p>
+<p><a href="https://ente.io/">ente Photos</a> is available on all devices, it is fully open source and uses end-to-end encryption, meaning any photo is encrypted before it is send to their server.</p>
+<p>Their pricing scheme is also reasonable. I honestly could not think of a better product to store all my photos and videos!</p>
+<h2>Messaging</h2>
+<p>I gotta admit, WhatsApp and Messenger have one of the best video chat capabilities out there - especially on a bad data connection. However there is a close competitor to both of these Meta messaging apps and that would be <a href="https://telegram.org/">Telegram</a>.</p>
+<p>Some people do have privacy concerns about Telegram, but you can make secret chats with end-to-end encryption and verify the source code as the client side software is open source.</p>
+<p>The server side code is sadly not open source thus it could be that at some point all the chats that are not in a secret chat go in the hands of the wrong people.</p>
+<p>There are many other messaging apps which are more private, but they are harder to use and are not as popular, such as:</p>
+<ul>
+<li><a href="https://getsession.org/">Session</a></li>
+<li><a href="https://element.io/">Element</a></li>
+<li><a href="https://simplex.chat/">SimpleX</a></li>
+<li><a href="https://xmpp.org/">XMPP</a></li>
+</ul>
+<p>For a more comprehensive comparison of privacy concerns relating messaging check out
+<a href="https://www.securemessagingapps.com/">Secure Messaging Apps</a>.</p>
+<h2>Social media</h2>
+<p>Facebook is a great way to connect with your old long lost buddies, and such a great way to be bombarded by advertising and getting your data sold. And best of all if you speak out against certain narratives your account could be suspended.</p>
+<p><a href="https://twitter.com/">Twitter</a> has been changing radically since the Elon Musk takeover. He has said many times that he will open source the algorithm and bring freedom of speech back.</p>
+<p><a href="https://github.com/twitter">Parts</a> of it have been open sourced and a lot of conservative voices have finally been able to return to the platform.</p>
+<p>Who knows if it will continue going in a more positive direction, I have my doubts and although it has become a vital place to find out what is going on in the world I would encourage people to learn more about federated social media.</p>
+<p>The topic of federated social media is vast and can quickly become very complex for most people - with all the different protocols and platforms.</p>
+<p>If you are interested in this topic I recommend checking out some of the notable software powering the <a href="https://en.wikipedia.org/wiki/Fediverse">fediverse</a>.</p>
+<p>The fediverse is not governed by a single entity, instead the power is spread out between different instances and nodes in the network.</p>
+<p>Anyone can become part of the network and run the software on a server, thus distributing the network further.</p>
+<ul>
+<li><a href="https://nostr.com/">Nostr</a></li>
+<li><a href="https://joinmastodon.org/">Mastodon</a></li>
+<li><a href="https://soapbox.pub/">Soapbox</a></li>
+</ul>
+<h2>Password Manager</h2>
+<p>Some people <a href="https://www.kiplinger.com/personal-finance/lastpass-hack">wrongfully</a> recommend LastPass as a secure way to generate passwords.</p>
+<p>They have been hacked multiple times. Their software is not open source and they potentially have access to all your passwords.</p>
+<p>Having a secure password and enabling Two-Factor Authentication is the best way to keep your account secure.</p>
+<p>There are many great open source android applications for Two-Factor Authentication such as <a href="https://getaegis.app/">Aegis Authenticator</a>.</p>
+<p>For Linux desktop I recommend using <a href="https://apps.kde.org/keysmith/">KDE Keysmith</a>.</p>
+<p>This will allow you to use Two-Factor Authentication without the proprietary Goggle Authenticator or Microsoft Authenticator apps.</p>
+<p>To store passwords securely I would recommend trying <a href="https://bitwarden.com/">Bitwarden</a> (similar to LastPass, but fully open source), <a href="https://www.keepassdx.com/">KeePassDx</a> (android only) or <a href="https://www.lesspass.com/">LessPass</a>.</p>
+<p>LessPass is probably the most interesting one from these recommendations, as you can setup a certain combination, and type in the domain for which you would like to generate a password.</p>
+<p>Thus you only need to remember one combination and you can generate a unique password for any website you use. You do not need to store any passwords in any database, as everything is generated directly on your device.</p>
+<p>Lastly if finding an alternative way for generating or storing passwords is too much hassle, using the Brave default password manager will give you decent protection and allow you to sync your password between your Brave installations. Giving you the convenience you might be used to.</p>
+<p><img src="/assets/rabbit.jpg" alt="Cyber Rabbit"></p>
+<h1>Finding your own way</h1>
+<p>The journey to finding what works for you can be long and the willingness to try something new even longer. What is important is taking small steps and understanding the threat we are facing if governments know our every move and we have no privacy.</p>
+<p>The list of alternatives is endless. Luckily you can go to <a href="https://alternativeto.net/">alternativeto.net</a> and find applications similar to what you are using, and possibly even an open source solution that you can trust.</p>
+<p>I once again want to remind that the issue of reaching true privacy is deeper than just changing the software.</p>
+<p>Creating an open ecosystem for hardware is a crucial step to reduce the chances of us ending up in a totalitarian world government where all our actions are monitored and controlled by those above us.</p>
+<p>There are many noteworthy projects out there that are inspiring to give you more control over your device such as <a href="https://www.pine64.org/pinephone/">pine64</a>, <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, <a href="https://www.fairphone.com/en/">Fairphone</a> and <a href="https://system76.com/">System76</a>.</p>
+<p>To find other great projects you can look at Wikipedia's list of <a href="https://en.wikipedia.org/wiki/List_of_open-source_hardware_projects">open hardware projects</a> and <a href="https://en.wikipedia.org/wiki/List_of_open-source_mobile_phones">open-source mobile phones</a>.</p>
+<h2>Support</h2>
+<p>If you found this article insightful please consider leaving a tip.</p>
+<p>Share this article with your aunt, grandmother, your pets and a stranger down the road to make more people aware about these issues and how they can find more privacy.</p>
+<p>Thank you for reading!</p>
+
+        </div>
+        <a href="index.html" class="back-link">Back to Writings</a>
+    </div>
+</body>
+</html>
