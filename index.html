@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waozi - Digital Tao by Martin Schiller</title>
+    
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #ffff00;
+        }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        .connect {
+            margin-top: 20px;
+            border-top: 1px dashed #00ff00;
+            padding-top: 20px;
+        }
+        .connect pre {
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+    </style>
+
+</head>
+<body>
+    <pre>
+    ☯️
+   / \
+  /   \
+ /  ☯️  \
+/_______\
+    </pre>
+    <h1>W A O Z I</h1>
+    <p id="blinker" class="blink"></p>
+    <p>Welcome, digital wanderer. You've discovered Waozi, the nexus of technology and Eastern wisdom, curated by Martin Schiller.</p>
+    <h2>Navigate the Digital Tao:</h2>
+    <ul>
+        <li><a href="https://naox.io">/naox.io</a> - Enlightened Applications
+            <ul>
+                <li><a href="https://ukuvota.world">/ukuvota.world</a> - Collaborative Score Voting</li>
+                <li><a href="https://inner-breeze.app">/inner-breeze.app</a> - Wim Hof Breathing Meditation</li>
+            </ul>
+        </li>
+        <li><a href="https://alpega.github.io">/alpega.github.io</a> - Crypto & Playful Projects</li>
+    </ul>
+    <p id="quote"></p>
+    <pre>
+01010111 01100001 01101111 01111010 01101001
+    </pre>
+
+    <div class="connect">
+        <h2>Connect with me:</h2>
+        <pre>
+  ___
+ /   \
+|  X  |  <a href="https://x.com/waozi_">@waozi_</a>
+ \___/
+        </pre>
+        <pre>
+  ___
+ / _ \
+| (_) | <a href="mailto:hello@waozi.dev">hello@waozi.dev</a>
+ \___/
+        </pre>
+        <pre>
+   _
+ _| |_
+|_   _| <a href="https://ditto.pub/@waozi@ditto.pub">@waozi@ditto.pub</a>
+  |_|   (ActivityPub & Nostr)
+        </pre>
+        <pre>
+  ___
+ /   \
+|     | <a href="https://t.me/waozi_dev">Telegram</a>
+ \___/
+        </pre>
+        <pre>
+  ___
+ / _ \
+| (_) | <a href="https://github.com/waozi-dev">GitHub</a>
+ \___/
+        </pre>
+    </div>
+
+    <script>
+        // Array of blinker texts
+        const blinkerTexts = [
+            ">> Enlightenment status: Loading...",
+            ">> Seeking balance in the digital realm...",
+            ">> Compiling ancient wisdom for modern times...",
+            ">> Syncing consciousness with the cloud...",
+            ">> Defragmenting the soul...",
+            ">> Updating spiritual firmware...",
+            ">> Quantum entangling with the universe...",
+            ">> Decrypting the mysteries of existence...",
+            ">> Optimizing karma allocation...",
+            ">> Rebooting perception of reality..."
+        ];
+
+        // Array of quotes
+        const quotes = [
+            "\"The Tao that can be coded is not the eternal Tao. The variable that can be named is not the constant variable.\" - Waozi",
+            "\"The code of the sage is bugless, yet it compiles in all machines.\" - Waozi",
+            "\"In the digital age, true power lies not in controlling information, but in understanding it.\" - Waozi",
+            "\"The wise programmer writes code that appears to have written itself.\" - Waozi",
+            "\"As the blockchain is immutable, so too should our commitment to wisdom be unchanging.\" - Waozi",
+            "\"The user interface of life is complex, but its source code is simple.\" - Waozi",
+            "\"In the vastness of the internet, find your own localhost.\" - Waozi",
+            "\"The firewall of the mind must be permeable to wisdom, yet impenetrable to delusion.\" - Waozi",
+            "\"To master the digital realm, one must first master the self.\" - Waozi",
+            "\"The most elegant solution is often the one with the fewest lines of code and the most lines of thought.\" - Waozi",
+            "\"As we debug our programs, so too must we debug our minds.\" - Waozi",
+            "\"The sage developer commits often to the repository of knowledge.\" - Waozi"
+        ];
+
+        // Function to get a random item from an array
+        function getRandomItem(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        // Set random blinker text
+        document.getElementById('blinker').textContent = getRandomItem(blinkerTexts);
+
+        // Set random quote
+        document.getElementById('quote').textContent = getRandomItem(quotes);
+    </script>
+</body>
+</html>
