@@ -4,13 +4,14 @@ A digital reflection in the vast ocean of consciousness.
 
 ## 🌊 Ripples
 
-- [naox.io](https://naox.io) - Digital tools for collective growth
-  - [ukuvota.world](https://ukuvota.world) - Collaborative score voting tool
-  - [inner-breeze.app](https://inner-breeze.app) - Wim Hof meditation tracker
-- [alpega.github.io](https://alpega.github.io) - Crypto experiments & playful projects
-- Writings - Thoughts adrift in the digital sea
-  - Clingy Tree - Letting go (2020)
-  - The Micronation - Imagining new societies (Upcoming)
+### NaoX - Digital tools for collective growth
+- [Ukuvota](https://github.com/naoxio/ukuvota) - Collaborative score voting tool
+  - [Live at ukuvota.world](https://ukuvota.world)
+- [Inner Breeze](https://github.com/naoxio/inner_breeze) - Wim Hof meditation tracker
+  - [Live at inner-breeze.app](https://inner-breeze.app)
+
+### [Alpega](https://github.com/alpega) - Crypto experiments & playful projects
+- Explore our repositories for various blockchain and fun coding projects
 
 ## 🌐 Connect
 
