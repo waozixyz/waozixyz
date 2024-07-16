@@ -37,4 +37,5 @@ It wasn't long after that that you fully abandoned me — not only me but all yo
 I am, however, thankful that I had you at all, and the few moments we shared have defined me in certain ways. You have left your mark on this world, and hopefully I will leave mine. I will not let my life go to waste.
 
 Yours faithfully,
+
 Martin Schiller
