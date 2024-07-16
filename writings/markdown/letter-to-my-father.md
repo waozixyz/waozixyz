@@ -1,9 +1,9 @@
 ---
 imgSrc: "/assets/father_letter.jpg"
-imgAlt: "A handwritten letter on an old desk"
+imgAlt: "A father and a son heading to a sailing boat"
 category: "personal"
 title: "Letter to My Father"
-desc: "A heartfelt reflection on a complex father-son relationship, exploring themes of abandonment, growth, and healing."
+desc: "A reflection on my personal father-son relationship, exploring themes of abandonment, growth, and healing."
 date: "May 25, 2023"
 readTime: "5 min read"
 ---
