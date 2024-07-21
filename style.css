@@ -1,146 +1,239 @@
+@font-face {
+    font-family: 'Philosopher';
+    src: url('assets/Philosopher-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    background-color: #000;
-    color: #00ff00;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 20px;
+    background: linear-gradient(45deg, #A8D8B9, #A1C6EA, #E6D2B5, #C5B9CD);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
-h1, h2 {
-    color: #ffff00;
+header {
+    padding-top: 40px;
 }
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Philosopher', sans-serif;
+    color: #2C3E50;
+}
+
 a {
-    color: #00ffff;
+    color: #3498DB;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
+
 a:hover {
+    color: #2980B9;
     text-decoration: underline;
 }
+
 .blink {
     animation: blinker 1s linear infinite;
 }
+
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
+
 .connect {
-    margin-top: 20px;
-    border-top: 1px dashed #00ff00;
+    margin-top: 40px;
+    border-top: 1px solid #BDC3C7;
     padding-top: 20px;
 }
+
 .connect pre {
     display: inline-block;
     margin-right: 20px;
     vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .ripples {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
 }
 
 .ripples section {
     flex: 1 1 300px;
-    background: rgba(0, 255, 0, 0.1);
-    border: 1px solid #00ff00;
-    padding: 20px;
-    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.ripples section:hover {
+    transform: translateY(-5px);
 }
 
 .ripples h3 {
-    color: #ffff00;
-    border-bottom: 1px dashed #00ff00;
+    color: #2C3E50;
+    border-bottom: 1px solid #BDC3C7;
     padding-bottom: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .writings {
     flex-basis: 100%;
 }
 
-.writing-grid {
+.writing-grid, .app-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.writing-card {
-    background: rgba(0, 255, 0, 0.05);
-    border: 1px solid #00ff00;
-    padding: 15px;
+.writing-card, .anavpp-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
     transition: all 0.3s ease;
 }
 
-.writing-card:hover {
-    box-shadow: 0 0 10px #00ff00;
+.writing-card:hover, .app-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
 }
 
-.writing-card h4 {
-    margin: 0 0 10px 0;
+.writing-card h4, .app-card h4 {
+    margin: 0 0 15px 0;
 }
 
 .app-meta, .writing-meta {
     font-style: italic;
-    font-size: 0.85em;
+    font-size: 0.9em;
     margin-bottom: 10px;
-    color: #00cc00; /* A slightly dimmer green for meta information */
+    color: #7F8C8D;
 }
 
 .app-excerpt, .writing-excerpt {
     font-size: 0.95em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .more-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 5px 10px;
-    border: 1px solid #00ffff;
-    color: #00ffff;
+    margin-top: 20px;
+    padding: 8px 15px;
+    border: 1px solid #3498DB;
+    color: #3498DB;
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .more-btn:hover {
-    background: rgba(0, 255, 255, 0.2);
+    background: #3498DB;
+    color: #FFF;
     text-decoration: none;
-}
-.app-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.app-card {
-    background: rgba(0, 255, 0, 0.05);
-    border: 1px solid #00ff00;
-    padding: 15px;
-    transition: all 0.3s ease;
-}
-
-.app-card:hover {
-    box-shadow: 0 0 10px #00ff00;
-}
-
-.app-card h4 {
-    margin: 0 0 10px 0;
 }
 
 blockquote {
-    background-color: #1a1a1a;
-    border-left: 2px solid #00ff00;
-    margin: 10px 0;
-    padding: 5px 10px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 14px;
+    background-color: rgba(189, 195, 199, 0.2);
+    border-left: 3px solid #3498DB;
+    margin: 15px 0;
+    padding: 10px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
     overflow-x: auto;
-    white-space: nowrap;
 }
 
 blockquote p {
     margin: 0;
-    display: inline-block;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498DB;
+}
+
+@media (max-width: 768px) {
+    .ripples {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .writing-grid, .app-grid {
+        grid-template-columns: 1fr;
+    }
 }
