@@ -60,7 +60,7 @@ local template = read_file(template_file)
 -- Table to store writing summaries
 local writings = {}
 
--- Process each Markdown file
+-- Process each Markdown file-- Process each Markdown file
 for file in lfs.dir(markdown_dir) do
     if file:match("%.md$") then
         local md_path = markdown_dir .. "/" .. file
@@ -82,6 +82,8 @@ for file in lfs.dir(markdown_dir) do
                 "<div class='image-row'>%1%2</div>"
             )
 
+            -- Get the URL (file name without extension)
+            local url = file:gsub("%.md$", "")
 
             -- Apply template
             local page_content = template
@@ -89,6 +91,7 @@ for file in lfs.dir(markdown_dir) do
                 page_content = page_content:gsub("{{" .. key:upper() .. "}}", value)
             end
             page_content = page_content:gsub("{{CONTENT}}", html_content)
+            page_content = page_content:gsub("{{URL}}", url)
 
             -- Write the HTML file
             write_file(html_path, page_content)
@@ -100,13 +103,12 @@ for file in lfs.dir(markdown_dir) do
                 excerpt = metadata.excerpt or "",
                 desc = metadata.desc or "",
                 readTime = metadata.readTime or "",
-                link = file:gsub("%.md$", ".html")
+                link = file:gsub("%.md$", ".html"),
+                url = url
             })
         end
     end
 end
-
-
 
 -- Sort writings by date
 table.sort(writings, function(a, b)
