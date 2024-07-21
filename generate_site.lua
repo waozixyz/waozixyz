@@ -38,7 +38,7 @@ end
 local function extract_yaml_and_content(file_content)
     local yaml_str = file_content:match("^%-%-%-\n(.-)\n%-%-%-\n")
     local content = file_content:gsub("^%-%-%-\n.-\n%-%-%-\n", "")
-    
+
     if yaml_str then
         return yaml.load(yaml_str), content
     else
@@ -65,28 +65,34 @@ for file in lfs.dir(markdown_dir) do
     if file:match("%.md$") then
         local md_path = markdown_dir .. "/" .. file
         local html_path = html_dir .. "/" .. file:gsub("%.md$", ".html")
-        
+
         local md_content = read_file(md_path)
         if md_content then
             -- Extract YAML metadata and content
             local metadata, content = extract_yaml_and_content(md_content)
-            
+
             -- Convert Markdown to HTML using md4c
             local html_content = shell(string.format("echo '%s' | md2html --github", content:gsub("'", "'\\''")))
-            
+
             -- Remove the auto-generated HTML, head, and body tags
             html_content = html_content:gsub("<!DOCTYPE html>.-<body>", ""):gsub("</body></html>", "")
-            
+
+            html_content = html_content:gsub(
+                "<p>(<img [^>]+>) ?(<img [^>]+>)</p>",
+                "<div class='image-row'>%1%2</div>"
+            )
+
+
             -- Apply template
             local page_content = template
             for key, value in pairs(metadata) do
                 page_content = page_content:gsub("{{" .. key:upper() .. "}}", value)
             end
             page_content = page_content:gsub("{{CONTENT}}", html_content)
-            
+
             -- Write the HTML file
             write_file(html_path, page_content)
-            
+
             -- Store writing summary
             table.insert(writings, {
                 title = metadata.title,
@@ -103,7 +109,7 @@ end
 
 
 -- Sort writings by date
-table.sort(writings, function(a, b) 
+table.sort(writings, function(a, b)
     return parse_date(a.date) > parse_date(b.date)
 end)
 
