@@ -16,10 +16,10 @@ A digital reflection in the vast ocean of consciousness.
 ## 🌐 Connect
 
 - [Twitter](https://x.com/waozi_)
-- [Email](mailto:hello@waozi.dev)
+- [Email](mailto:hello@waozi.xyz)
 - [ActivityPub/Nostr](https://ditto.pub/@waozi)
-- [Telegram](https://t.me/waozi_dev)
-- [GitHub](https://github.com/waozi-dev)
+- [Telegram](https://t.me/waozixyz)
+- [GitHub](https://github.com/waozixyz)
 
     ☯️☸♡
     
