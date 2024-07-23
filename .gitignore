@@ -29,6 +29,4 @@ result-*
 # Logs
 *.log
 
-dist/
-
 .venv

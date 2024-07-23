@@ -1,0 +1,226 @@
+/* Font Declarations */
+@font-face {
+    font-family: 'Philosopher';
+    src: url('assets/Philosopher-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Styles */
+body {
+    background: linear-gradient(45deg, #A8D8B9, #A1C6EA, #E6D2B5, #C5B9CD);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Philosopher', sans-serif;
+    color: #2C3E50;
+}
+
+a {
+    color: #3498DB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980B9;
+    text-decoration: underline;
+}
+
+/* Layout */
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+}
+
+header {
+    padding-top: 40px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498DB;
+}
+
+/* Cards */
+.app-grid, .writing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.app-card, .writing-card {
+    background: rgba(0, 255, 0, 0.05);
+    border: 1px solid #00ff00;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.app-card:hover, .writing-card:hover {
+    box-shadow: 0 0 10px #00ff00;
+    transform: translateY(-5px);
+}
+
+.app-card h3, .writing-card h3 {
+    margin-top: 0;
+}
+
+.app-meta, .writing-meta {
+    font-style: italic;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    color: #00cc00;
+}
+
+.app-excerpt, .writing-excerpt {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.more-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+/* Connect Section */
+.connect {
+    margin-top: 40px;
+    border-top: 1px solid #BDC3C7;
+    padding-top: 20px;
+}
+
+.connect pre {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Blockquote */
+blockquote {
+    background-color: rgba(189, 195, 199, 0.2);
+    border-left: 3px solid #3498DB;
+    margin: 15px 0;
+    padding: 10px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+    overflow-x: auto;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .writing-grid, .app-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-card, .writing-card {
+        padding: 15px;
+    }
+    
+    .app-grid, .writing-grid {
+        gap: 15px;
+    }
+}
