@@ -1,0 +1,3 @@
+[submodule "proj/mylife"]
+	path = proj/mylife
+	url = https://github.com/waozixyz/mylife
