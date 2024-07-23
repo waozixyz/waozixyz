@@ -1,0 +1,22 @@
+body {
+  overflow: hidden;
+}
+
+#canvas-container {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+canvas {
+  position: relative;
+}
+
+.square-content {
+  display: none;
+}
+

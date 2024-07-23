@@ -1,19 +1,19 @@
 - name: MyLife
-  url: https://waozi.dev/proj/mylife/
+  url: https://mylifetimeline.netlify.app/
   description: My Life Timeline
   version: v1.0
   updated: 2024-07-23
   excerpt: Visualize your life events on an interactive timeline.
 
 - name: Pixelflux
-  url: https://pixelflux.io/
+  url: https://waozi.dev/proj/pixelflux/
   description: Pixel Ownership Game
   version: v1.0
   updated: 2024-02-11
   excerpt: Claim, customize, and trade pixel layers in this unique blockchain game...
 
 - name: Geocats
-  url: https://geocats.netlify.app
+  url: https://waozi.dev/proj/geocats/
   description: Retro-style 2D Action Platformer
   version: v420-Demo
   updated: 2022-04-15

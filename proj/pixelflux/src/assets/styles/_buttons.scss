@@ -1,0 +1,38 @@
+button, .button {
+  display: block;
+  margin: 15px auto;
+  padding: 8px 15px;
+  background-color: $color-button-bg;
+  border: none;
+  border-radius: 5px;
+  color: $color-button-text;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px $color-button-shadow;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+button:hover, .button:hover {
+  background-color: $color-button-bg-hover;
+  transform: scale(1.05);
+}
+
+button:active, .button:active {
+  transform: scale(0.95);
+}
+
+button:focus, .button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px $color-button-focus-outline;
+}
+button:disabled, .button:disabled {
+  background-color: $color-button-disabled-bg;
+  color: $color-button-disabled-text;
+  cursor: not-allowed;
+  box-shadow: none;
+  
+  &:hover, &:active {
+    transform: none;
+  }
+}

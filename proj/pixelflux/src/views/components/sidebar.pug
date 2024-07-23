@@ -1,0 +1,44 @@
+#sidebar.modal
+  #top-nav
+    h1
+      button#close-modal Close
+      p Pixelflux
+    #button-container
+      button#connect-wallet
+        span#connect-text Connect Wallet
+        span#address-text(style="display: none;")
+          span#account-address
+  br
+  div.square-content
+    .pixel-card
+      .pixel-display-container
+        .pixel-current
+        span &nbsp;-&gt;
+        .pixel-preview
+      .pixel-properties
+
+    .purchase-card
+      h2 Purchase
+      #color-options
+      br
+      div.slider-controls
+        button#decrease-btn - 
+        div#slider-value 0
+        button#increase-btn +
+      input#layer-slider(type="range" min="0" max="10" value="0")
+      span#current-cost-container 
+        p Total Cost
+        span
+          span#current-cost
+      button#purchase-button(disabled) Buy Layer
+    
+    .history-card
+      h2 History
+      ul#history
+        li
+          .color-circle(style="background-color: #FF5733;")
+          .purchase-info Value: 70, Contract: 0xABC...DEF
+      .pagination
+        button#prev-button &laquo; Prev
+        button#next-button Next &raquo;
+  br

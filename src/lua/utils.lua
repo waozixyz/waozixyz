@@ -12,6 +12,8 @@ function utils.read_file(path)
 end
 
 function utils.write_file(path, content)
+    -- Ensure the directory exists before writing the file
+    utils.ensure_dir_exists(path:match("(.+)/[^/]*$"))
     local file = io.open(path, "w")
     if not file then return false end
     file:write(content)
@@ -38,10 +40,18 @@ function utils.parse_date(date_str)
     return month and day and year and os.time({year=tonumber(year), month=months[month], day=tonumber(day)}) or 0
 end
 
+function utils.ensure_dir_exists(path)
+    local current = ""
+    for dir in path:gmatch("([^/]+)") do
+        current = current .. dir .. "/"
+        lfs.mkdir(current)
+    end
+end
 function utils.copy_dir(src, dest)
-    lfs.mkdir(dest)
+    utils.ensure_dir_exists(dest)
     for file in lfs.dir(src) do
-        if file ~= "." and file ~= ".." then
+        -- Ignore hidden files and directories
+        if file:sub(1,1) ~= "." then
             local src_path = src .. "/" .. file
             local dest_path = dest .. "/" .. file
             local attr = lfs.attributes(src_path)
@@ -49,10 +59,18 @@ function utils.copy_dir(src, dest)
                 utils.copy_dir(src_path, dest_path)
             else
                 local src_file = io.open(src_path, "rb")
-                local dest_file = io.open(dest_path, "wb")
-                dest_file:write(src_file:read("*all"))
-                src_file:close()
-                dest_file:close()
+                if src_file then
+                    local dest_file = io.open(dest_path, "wb")
+                    if dest_file then
+                        dest_file:write(src_file:read("*all"))
+                        dest_file:close()
+                    else
+                        print("Warning: Could not open destination file for writing: " .. dest_path)
+                    end
+                    src_file:close()
+                else
+                    print("Warning: Could not open source file for reading: " .. src_path)
+                end
             end
         end
     end
@@ -60,7 +78,7 @@ end
 
 function utils.load_yaml(file_path)
     local content = utils.read_file(file_path)
-    return yaml.load(content)
+    return content and yaml.load(content) or nil
 end
 
 return utils

@@ -5,7 +5,7 @@ local projects = {}
 
 function projects.generate_projects_index()
     local naox_projects = utils.load_yaml(config.naox_projects_file)
-    local other_projects = utils.load_yaml(config.other_projects_file)
+    local waozi_projects = utils.load_yaml(config.waozi_projects_file)
     local all_projects = {}
     
     for _, project in ipairs(naox_projects) do
@@ -13,8 +13,8 @@ function projects.generate_projects_index()
         table.insert(all_projects, project)
     end
     
-    for _, project in ipairs(other_projects) do
-        project.category = "Other"
+    for _, project in ipairs(waozi_projects) do
+        project.category = "Waozi"
         table.insert(all_projects, project)
     end
     

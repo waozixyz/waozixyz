@@ -1,0 +1,39 @@
+block variables
+  - let faviconPath = "../assets/favicon.ico"
+  - let socialLogoPath = "../assets/social_logo.jpg"
+  - let stylePath = "../assets/styles/index.scss"
+
+doctype html
+html(lang="en")
+
+  head
+    meta(charset="UTF-8")
+    
+    // Basic Metadata
+    title Pixelflux - Own Your Pixel Layer
+    meta(name="description", content="Pixelflux allows you to buy and own pixels. Become a permanent owner and earn as layers are added to your pixel.")
+    meta(name="keywords", content="Pixelflux, Buy Pixels, Pixel Ownership, Pixel Layers")
+    meta(name="author", content="Satoru Tamashi")
+
+    // Responsive Design
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    // Favicon
+    link(rel="icon", href= faviconPath, type="image/x-icon")
+
+    // Open Graph (for Facebook, etc.)
+    meta(property="og:title", content="Pixelflux - Own Your Pixel Layer")
+    meta(property="og:description", content="Pixelflux allows you to buy and own pixels. Become a permanent owner and earn as layers are added to your pixel.")
+    meta(property="og:image", content= socialLogoPath)
+    meta(property="og:url", content="https://polygon.pixelflux.io")
+
+    // Twitter Card
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:title", content="Pixelflux - Own Your Pixel Layer")
+    meta(name="twitter:description", content="Pixelflux allows you to buy and own pixels. Become a permanent owner and earn as layers are added to your pixel.")
+    meta(name="twitter:image", content= socialLogoPath)
+
+    link(rel="stylesheet", href= stylePath)
+
+  body
+    block content

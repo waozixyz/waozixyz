@@ -1,0 +1,26 @@
+
+#progress-bar {
+  width: 80%; 
+  height: 20px; 
+  background-color: $color-loading-border; 
+  position: absolute; 
+  top: calc(50% ); 
+  left: 50%; 
+  transform: translateX(-50%);
+
+  .progress-fill {
+    height: 100%; 
+    width: 0%; 
+    background-color: $color-loading-border-active; 
+    transition: width 0.5s ease;
+  }
+}
+
+#loading-text {
+  position: absolute; 
+  top: calc(50% + 30px); 
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: $color-loading-border-active; 
+  font-size: 16px;
+}

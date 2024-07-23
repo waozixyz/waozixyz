@@ -1,0 +1,40 @@
+// Primary colors
+$color-primary-light: #e0e0e0;
+$color-primary-dark: #232335;
+$color-secondary-dark: #141414;
+$color-accent: #a8a8f8;
+$color-accent-hover: #c9c9ff;
+$color-accent-active: #e1e1ff;
+
+// UI colors
+$color-shadow-light: rgba(0, 0, 0, 0.2);
+$color-shadow-dark: rgba(0, 0, 0, 0.3);
+$color-overlay: rgba(0, 0, 0, 0.7);
+$color-bg-gradient: linear-gradient(45deg, $color-primary-dark, $color-secondary-dark);
+
+// Button colors
+$color-button-bg: #535;
+$color-button-text: #e0e0e0;
+$color-button-bg-hover: #747;
+$color-button-shadow: rgba(0, 0, 0, 0.2);
+$color-button-focus-outline: #e0e0e0;$color-button-disabled-bg: #444;
+$color-button-disabled-text: #888;
+
+// Sidebar colors
+$color-sidebar-bg: $color-bg-gradient;
+$color-sidebar-text: $color-primary-light;
+$color-sidebar-shadow: rgba(0, 0, 0, 0.3);
+$color-scrollbar-track: #2c2c2c;
+$color-scrollbar-thumb: #535;
+$color-scrollbar-thumb-border: #4c2c4c;
+$color-scrollbar-thumb-hover: #777;
+
+// Loading Animation Colors
+$color-loading-border: $color-primary-dark;
+$color-loading-border-active: $color-accent;
+
+
+$color-primary-dark-rgba: rgba(35, 35, 53, 0.8); // Adjusted alpha value to 0.8 for 80% opacity
+$color-secondary-dark-rgba: rgba(20, 20, 20, 0.8); // Adjusted alpha value to 0.8 for 80% opacity
+
+$color-bg-gradient-opacity: linear-gradient(45deg, $color-primary-dark-rgba, $color-secondary-dark-rgba);
