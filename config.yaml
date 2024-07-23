@@ -1,0 +1,10 @@
+src_dir: "src"
+dist_dir: "dist"
+writings_dir: "src/writings"
+templates_dir: "src/templates"
+static_dir: "src/static"
+proj_dir: "src/proj"
+main_template: "main.html"
+writing_template: "writing.html"
+index_file: "index.html"
+max_writings: 2
