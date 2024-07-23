@@ -6,14 +6,14 @@
   excerpt: Visualize your life events on an interactive timeline.
 
 - name: Pixelflux
-  url: https://waozi.dev/proj/pixelflux/
+  url: https://pixelflux.netlify.app/
   description: Pixel Ownership Game
   version: v1.0
   updated: 2024-02-11
   excerpt: Claim, customize, and trade pixel layers in this unique blockchain game...
 
 - name: Geocats
-  url: https://waozi.dev/proj/geocats/
+  url: https://geocats.netlify.app/
   description: Retro-style 2D Action Platformer
   version: v420-Demo
   updated: 2022-04-15

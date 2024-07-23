@@ -15,7 +15,6 @@ local function main()
     -- Setup
     setup.create_directories()
     setup.copy_static_files()
-    setup.copy_proj_files()
 
     -- Process content
     local processed_writings = writings.process_writings()

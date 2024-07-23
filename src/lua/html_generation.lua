@@ -3,7 +3,6 @@ local config = require "config"
 
 local html_generation = {}
 
-
 function html_generation.generate_writing_section(writings)
     local writing_section = "<section class=\"writings\"><h3>Writings - Thoughts Adrift in the Digital Sea</h3><div class=\"writing-grid\">"
     for i = 1, math.min(config.max_writings, #writings) do
@@ -23,7 +22,7 @@ function html_generation.update_main_index(writing_section, projects_section)
         print("Error: Could not read index file at " .. index_path)
         return
     end
-    index_content = index_content:gsub('<section class="writings">.-</section>', writing_section)
+    index_content = index_content:gsub('<section id="writings" class="writings fade%-in">.-</section>', writing_section)
     index_content = index_content:gsub('<section id="projects" class="projects fade%-in">.-</section>', projects_section)
     utils.write_file(config.dist_dir .. "/index.html", index_content)
 end
@@ -48,7 +47,7 @@ function html_generation.generate_writings_index(writings)
 end
 
 function html_generation.generate_project_cards(projects, max_display)
-    print()
+    table.sort(projects, function(a, b) return a.updated > b.updated end)
     local cards = ""
     for i = 1, math.min(max_display, #projects) do
         local project = projects[i]
@@ -66,19 +65,21 @@ end
 function html_generation.generate_projects_section()
     local naox_projects = utils.load_yaml(config.naox_projects_file)
     local waozi_projects = utils.load_yaml(config.waozi_projects_file)
-    local naox_cards = html_generation.generate_project_cards(naox_projects, config.max_projects_display)
-    local waozi_cards = html_generation.generate_project_cards(waozi_projects, config.max_projects_display)
+    
+    local all_projects = {}
+    for _, project in ipairs(naox_projects) do
+        table.insert(all_projects, project)
+    end
+    for _, project in ipairs(waozi_projects) do
+        table.insert(all_projects, project)
+    end
+    
+    table.sort(all_projects, function(a, b) return a.updated > b.updated end)
+    
+    local project_cards = html_generation.generate_project_cards(all_projects, config.max_projects_display)
     
     return string.format([[
         <section id="projects" class="projects fade-in">
-            <article class="naox-apps">
-                <h2>NaoX - Digital Tools for Collective Growth</h2>
-                <div class="app-grid">
-                    %s
-                </div>
-                <a href="https://naox.io/" class="more-btn">More Apps</a>
-            </article>
-            
             <article class="projects">
                 <h2>Projects</h2>
                 <div class="app-grid">
@@ -87,7 +88,7 @@ function html_generation.generate_projects_section()
                 <a href="proj/" class="more-btn">More Projects</a>
             </article>
         </section>
-    ]], naox_cards, waozi_cards)
+    ]], project_cards)
 end
 
 return html_generation
