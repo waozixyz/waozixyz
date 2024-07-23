@@ -1,0 +1,13 @@
+- name: Inner Breeze
+  url: https://inner-breeze.app
+  description: Wim Hof Breathing Method
+  version: v1.3.1
+  updated: 2024-04-26
+  excerpt: Find serenity in every breath with guided meditation...
+
+- name: Ukuvota
+  url: https://ukuvota.world
+  description: Weighted Score Voting
+  version: v1.0.4
+  updated: 2024-05-03
+  excerpt: Empower precise, consensus-driven decision making...
