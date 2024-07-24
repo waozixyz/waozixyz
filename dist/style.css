@@ -12,7 +12,10 @@
     font-weight: normal;
     font-style: normal;
 }
-
+html,body {
+    margin: 0;  
+    padding: 0;
+}
 /* Global Styles */
 body {
     background: linear-gradient(45deg, #A8D8B9, #A1C6EA, #E6D2B5, #C5B9CD);
@@ -22,8 +25,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
 }
 
 h1, h2, h3, h4 {
@@ -51,7 +52,7 @@ header, main, footer {
     max-width: 600px;
 }
 
-header {
+header, section, footer {
     padding-top: 40px;
 }
 

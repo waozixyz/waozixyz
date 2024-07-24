@@ -4,7 +4,7 @@ local config = require "config"
 local html_generation = {}
 
 function html_generation.generate_writing_section(writings)
-    local writing_section = "<section class=\"writings\"><h3>Writings - Thoughts Adrift in the Digital Sea</h3><div class=\"writing-grid\">"
+    local writing_section = "<section id=\"writings\" class=\"writings fade-in\"><h3>Writings - Thoughts Adrift in the Digital Sea</h3><div class=\"writing-grid\">"
     for i = 1, math.min(config.max_writings, #writings) do
         local w = writings[i]
         writing_section = writing_section .. string.format(
