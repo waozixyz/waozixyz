@@ -1,12 +1,12 @@
 - name: MyLife
-  url: https://mylifetimeline.netlify.app/
+  url: https://mylife.waozi.xyz/
   description: My Life Timeline
   version: v1.0
   updated: 2024-07-24
   excerpt: Visualize your life events on an interactive timeline.
 
 - name: Pixelflux
-  url: https://pixelflux.netlify.app/
+  url: https://pixelflux.waozi.xyz/
   description: Pixel Ownership Game
   version: v1.0
   updated: 2024-02-11
