@@ -1,26 +1,38 @@
-{ pkgs, ... }:
+name: Build and Deploy
 
-{
-  packages = with pkgs; [
-    lua
-    luaPackages.luafilesystem
-    luaPackages.lyaml
-    md4c
-  ];
+on:
+  push:
+    branches:
+      - main 
 
-  enterShell = ''
-    export LUA_PATH="$PWD/src/lua/?.lua;${pkgs.luaPackages.lyaml}/share/lua/5.2/?.lua;${pkgs.luaPackages.lyaml}/share/lua/5.2/?/init.lua;$LUA_PATH"
-    export LUA_CPATH="${pkgs.luaPackages.lyaml}/lib/lua/5.2/?.so;$LUA_CPATH"
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-    echo "Waozi static site generator environment"
-    echo "Available commands:"
-    echo "  build    # Generate the site in the dist directory"
-  '';
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-  scripts.build = {
-    exec = ''
-      lua src/lua/build.lua
-    '';
-    description = "Generate the site in the dist directory";
-  };
-}
+    - name: Install Lua and dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lua5.3 liblua5.3-dev luarocks
+        sudo luarocks install luafilesystem
+        sudo luarocks install lyaml
+
+    - name: Set Lua path
+      run: |
+        echo "LUA_PATH='/usr/local/share/lua/5.3/?.lua;/usr/local/share/lua/5.3/?/init.lua;/usr/local/lib/lua/5.3/?.lua;/usr/local/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua;/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua'" >> $GITHUB_ENV
+        echo "LUA_CPATH='/usr/local/lib/lua/5.3/?.so;/usr/lib/x86_64-linux-gnu/lua/5.3/?.so;./?.so;/usr/lib/lua/5.3/?.so'" >> $GITHUB_ENV
+
+    - name: Build the site
+      run: lua src/lua/build.lua
+
+    - name: Install Netlify CLI
+      run: npm install -g netlify-cli
+
+    - name: Deploy to Netlify
+      run: netlify deploy --dir=dist --prod
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
