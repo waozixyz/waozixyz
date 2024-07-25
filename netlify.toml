@@ -1,0 +1,2 @@
+[build]
+  ignore = "echo 'Skipping build' && exit 0"
