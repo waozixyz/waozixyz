@@ -17,8 +17,13 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y lua5.3 luarocks
-        luarocks install luafilesystem
-        luarocks install lyaml
+        luarocks install --local luafilesystem
+        luarocks install --local lyaml
+
+    - name: Set up Lua path
+      run: |
+        echo "LUA_PATH='$HOME/.luarocks/share/lua/5.3/?.lua;$HOME/.luarocks/share/lua/5.3/?/init.lua;'$LUA_PATH'" >> $GITHUB_ENV
+        echo "LUA_CPATH='$HOME/.luarocks/lib/lua/5.3/?.so;'$LUA_CPATH'" >> $GITHUB_ENV
 
     - name: Build the site
       run: lua src/lua/build.lua
