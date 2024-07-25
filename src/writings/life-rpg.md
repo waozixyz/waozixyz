@@ -5,7 +5,7 @@ category: "Self-Help"
 title: "Life RPG: Gamifying Personal Growth"
 desc: "Discover how turning life into a role-playing game can boost motivation and help build positive habits."
 date: "Jul 21, 2024"
-readTime: "5 min read"
+readTime: "2 min read"
 ---
 # Life RPG
 Growing up stuck in the matrix, getting sucked into technology. Losing the true path as we become alienated and detached from the real world.
@@ -47,7 +47,7 @@ After finishing a quest I would receive a fair amount of tokens. I add the token
 
 One of these items I would indulge myself with my tokens is smoking my pipe. With this strategy I managed to keep building my routine and keep my consumption balanced.
 
-At other times when I was not consuming I would reward myself with playtime or watch time. paying tokens to watch 2 episodes or play a videogame for 2 hours.
+At other times when I was not consuming I would reward myself with playtime or watch time. Paying tokens to watch an episode or play a videogame for an hour.
 
 ![My life RPG setup in Portugal](../assets/life-rpg/liferpg_setup_pt.jpg)
 > Life RPG setup in my Caravan while staying in Portugal

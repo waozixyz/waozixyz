@@ -12,8 +12,8 @@ local config = load_config()
 
 -- Ensure all required fields are present
 local required_fields = {
-    "content_dir", "writings_dir", "naox_projects_file", "waozi_projects_file",
-    "templates_dir", "static_dir", "dist_dir",
+    "writings_dir", "naox_projects_file", "waozi_projects_file",
+    "templates_dir", "static_dir", "assets_dir", "dist_dir",
     "main_template", "writing_template", "writings_index_template", "projects_index_template",
     "max_writings", "max_projects_display", "index_file"
 }

@@ -41,7 +41,7 @@ function writings.process_writings()
     for file in lfs.dir(config.writings_dir) do
         if file:match("%.md$") then
             local writing = process_markdown_file(file)
-            if writing then
+            if writing and writing.date then
                 table.insert(processed_writings, writing)
             end
         end
