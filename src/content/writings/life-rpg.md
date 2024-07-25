@@ -47,6 +47,8 @@ After finishing a quest I would receive a fair amount of tokens. I add the token
 
 One of these items I would indulge myself with my tokens is smoking my pipe. With this strategy I managed to keep building my routine and keep my consumption balanced.
 
+At other times when I was not consuming I would reward myself with playtime or watch time. paying tokens to watch 2 episodes or play a videogame for 2 hours.
+
 ![My life RPG setup in Portugal](../assets/life-rpg/liferpg_setup_pt.jpg)
 > Life RPG setup in my Caravan while staying in Portugal
 

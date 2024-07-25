@@ -10,7 +10,7 @@ readTime: "5 min read"
 
 Dear father,
 
-It has been many years since we have last talked. I wrote you a short story - about our past and a short glimpse of my view. I am saddened how things have gone between us, possibly beyond repair. Humans are difficult and I am certain that you will learn to see things my way.
+It has been many years since we have last talked. I wrote you a short story - about our past and a short glimpse of my perspective. I am saddened how things have gone between us, possibly beyond repair. Humans are difficult and I am certain that you will learn to see things my way.
 
 I used to be a mother's child. I wasn't close to you. You were mostly at work and at home you would enjoy yourself with movies and alcohol. As a kid the only time actually spent together were on holidays, besides your strong desire to always go exploring we had our few family moments which I treasure dearly.
 
