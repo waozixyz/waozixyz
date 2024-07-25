@@ -5,7 +5,7 @@ category: "philosophical"
 title: "God's Game"
 desc: "A reflection on existence, exploring themes of reality, purpose, and the future of humanity."
 date: "Jul 26, 2024"
-readTime: "5 min read"
+readTime: "4 min read"
 ---
 
 # Trinity of God's game
