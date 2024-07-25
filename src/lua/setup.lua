@@ -6,12 +6,14 @@ local setup = {}
 function setup.create_directories()
     utils.shell("mkdir -p " .. config.dist_dir .. "/writings")
     utils.shell("mkdir -p " .. config.dist_dir .. "/proj")
+    utils.shell("mkdir -p " .. config.dist_dir .. "/assets")
 end
 
 
 function setup.copy_static_files()
     utils.shell("cp -r " .. config.static_dir .. "/* " .. config.dist_dir)
-    utils.shell("cp -r " .. config.assets_dir .. "/* " .. config.dist_dir)
+
+    utils.shell("cp -r " .. config.assets_dir .. "/* " .. config.dist_dir .. "/assets")
 end
 
 return setup
