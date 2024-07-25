@@ -13,20 +13,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install Lua and dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y lua5.3 liblua5.3-dev luarocks
-        sudo luarocks install luafilesystem
-        sudo luarocks install lyaml
+    - name: Install Nix
+      uses: cachix/install-nix-action@v22
 
-    - name: Set Lua path
-      run: |
-        echo "LUA_PATH='/usr/local/share/lua/5.3/?.lua;/usr/local/share/lua/5.3/?/init.lua;/usr/local/lib/lua/5.3/?.lua;/usr/local/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua;/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua'" >> $GITHUB_ENV
-        echo "LUA_CPATH='/usr/local/lib/lua/5.3/?.so;/usr/lib/x86_64-linux-gnu/lua/5.3/?.so;./?.so;/usr/lib/lua/5.3/?.so'" >> $GITHUB_ENV
+    - name: Install devenv
+      run: nix-env -i devenv
 
     - name: Build the site
-      run: lua src/lua/build.lua
+      run: |
+        devenv shell
+        build
 
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
