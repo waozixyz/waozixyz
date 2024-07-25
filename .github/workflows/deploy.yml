@@ -22,8 +22,10 @@ jobs:
     - name: Build the site
       run: |
         devenv shell
-        build
-
+        echo "Available commands:"
+        devenv list
+        devenv run build
+        
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
 
