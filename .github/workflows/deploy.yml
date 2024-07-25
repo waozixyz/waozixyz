@@ -28,7 +28,7 @@ jobs:
       run: devenv test
 
     - name: Build the site
-      shell: devenv shell build
+      run: devenv shell build
 
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
