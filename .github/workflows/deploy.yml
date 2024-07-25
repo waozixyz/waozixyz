@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   build:
@@ -17,14 +17,13 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y lua5.3 liblua5.3-dev luarocks
-        luarocks install --local luafilesystem
-        luarocks install --local lyaml
+        sudo luarocks install luafilesystem
+        sudo luarocks install lyaml
 
-    - name: Set Lua and LuaRocks paths
+    - name: Set Lua path
       run: |
-        echo "export PATH=$HOME/.luarocks/bin:$PATH" >> $GITHUB_ENV
-        echo "export LUA_PATH='$PWD/src/lua/?.lua;$HOME/.luarocks/share/lua/5.3/?.lua;$HOME/.luarocks/share/lua/5.3/?/init.lua;;'" >> $GITHUB_ENV
-        echo "export LUA_CPATH='$HOME/.luarocks/lib/lua/5.3/?.so;;'" >> $GITHUB_ENV
+        echo "LUA_PATH='/usr/local/share/lua/5.3/?.lua;/usr/local/share/lua/5.3/?/init.lua;/usr/local/lib/lua/5.3/?.lua;/usr/local/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua;/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua'" >> $GITHUB_ENV
+        echo "LUA_CPATH='/usr/local/lib/lua/5.3/?.so;/usr/lib/x86_64-linux-gnu/lua/5.3/?.so;./?.so;/usr/lib/lua/5.3/?.so'" >> $GITHUB_ENV
 
     - name: Build the site
       run: lua src/lua/build.lua
