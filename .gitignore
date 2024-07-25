@@ -31,4 +31,4 @@ result-*
 
 .venv
 
-dist
+dist/
