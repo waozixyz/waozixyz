@@ -28,9 +28,7 @@ jobs:
       run: devenv test
 
     - name: Build the site
-      shell: devenv shell bash -e {0}
-      run: |
-        lua src/lua/build.lua
+      shell: devenv shell build
 
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
