@@ -1,0 +1,35 @@
+name: Build and Deploy to Netlify
+
+on:
+  push:
+    branches: [ main ] 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Lua
+      uses: leafo/gh-actions-lua@v9
+      with:
+        luaVersion: "5.2" 
+
+    - name: Set up LuaRocks
+      uses: leafo/gh-actions-luarocks@v4
+
+    - name: Install dependencies
+      run: |
+        luarocks install lyaml
+        luaRocks install luafilesystem
+
+    - name: Build site
+      run: lua src/lua/build.lua
+
+    - name: Deploy to Netlify
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      run: |
+        npm install netlify-cli -g
+        netlify deploy --prod --dir=dist
