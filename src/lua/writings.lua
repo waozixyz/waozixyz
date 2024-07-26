@@ -50,6 +50,8 @@ local function process_markdown_file(file)
         content = html_content or "" -- Add this line
     }
 end
+
+
 function writings.process_writings()
     local processed_writings = {}
     for file in lfs.dir(config.writings_dir) do
@@ -66,7 +68,6 @@ function writings.process_writings()
         end
         return utils.parse_date(a.date) > utils.parse_date(b.date)
     end)
-
     -- Generate RSS feed
     local rss_template = utils.read_file(config.templates_dir .. "/atom.xml")
     local rss_content = rss_template
@@ -74,36 +75,45 @@ function writings.process_writings()
     rss_content = rss_content:gsub("{{SITE_URL}}", config.site_url)
     rss_content = rss_content:gsub("{{CURRENT_DATE}}", os.date("!%Y-%m-%dT%H:%M:%SZ"))
     rss_content = rss_content:gsub("{{AUTHOR_NAME}}", config.author_name)
-    
+
     local entries = ""
     for _, writing in ipairs(processed_writings) do
-        local entry = rss_template:match("<entry>.-</entry>")
-        if entry then
-            entry = entry:gsub("{{title}}", writing.title or "")
-            entry = entry:gsub("{{SITE_URL}}", config.site_url)  -- Add this line
-            entry = entry:gsub("{{url}}", writing.url or "")
-            entry = entry:gsub("{{date}}", writing.date or "")
-            entry = entry:gsub("{{desc}}", writing.desc or "")
-            entry = entry:gsub("{{content}}", writing.content or "")
-            
-            local categories = ""
-            for _, tag in ipairs(writing.tags or {}) do
-                categories = categories .. string.format('<category term="%s"/>', tag)
-            end
-            entry = entry:gsub("{{#each tags}}.-{{/each}}", categories)
-            
-            entries = entries .. entry
+        local categories = ""
+        for _, tag in ipairs(writing.tags or {}) do
+            categories = categories .. string.format('    <category term="%s"/>\n', utils.escape_xml(tag))
         end
-    end
-    rss_content = rss_content:gsub("{{#each ENTRIES}}.-{{/each}}", entries)
 
-    -- Replace any remaining {{SITE_URL}} placeholders in the main template
-    rss_content = rss_content:gsub("{{SITE_URL}}", config.site_url)
+        local entry = string.format(
+            '<entry>\n' ..
+            '    <title>%s</title>\n' ..
+            '    <link href="%s/writings/%s"/>\n' ..
+            '    <id>%s/writings/%s</id>\n' ..
+            '    <published>%s</published>\n' ..
+            '    <updated>%s</updated>\n' ..
+            '    <summary type="html"><![CDATA[%s]]></summary>\n' ..
+            '    <content type="html"><![CDATA[%s]]></content>\n' ..
+            '%s' ..
+            '</entry>\n',
+            utils.escape_xml(writing.title or ""),
+            config.site_url,
+            writing.url,
+            config.site_url,
+            writing.url,
+            os.date("!%Y-%m-%dT%H:%M:%SZ", utils.parse_date(writing.date)),
+            os.date("!%Y-%m-%dT%H:%M:%SZ", utils.parse_date(writing.date)),
+            writing.desc or "",
+            writing.content or "",
+            categories
+        )
+        
+        entries = entries .. entry
+    end
+
+    rss_content = rss_content:gsub("{{ENTRIES}}", entries)
 
     utils.write_file(config.dist_dir .. "/feed.atom", rss_content)
 
     return processed_writings
 end
-
 
 return writings

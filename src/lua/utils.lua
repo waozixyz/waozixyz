@@ -81,4 +81,13 @@ function utils.load_yaml(file_path)
     return content and yaml.load(content) or nil
 end
 
+function utils.escape_xml(s)
+    if s == nil then return "" end
+    return s:gsub("&", "&amp;")
+             :gsub("<", "&lt;")
+             :gsub(">", "&gt;")
+             :gsub("'", "&apos;")
+             :gsub('"', "&quot;")
+end
+
 return utils
