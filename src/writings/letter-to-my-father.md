@@ -6,6 +6,19 @@ title: "Letter to My Father"
 desc: "A reflection on my personal father-son relationship, exploring themes of abandonment, growth, and healing."
 date: "May 25, 2023"
 readTime: "5 min read"
+tags:
+  - family
+  - father-son relationship
+  - abandonment
+  - mental health
+  - depression
+  - alcoholism
+  - personal growth
+  - healing
+  - self-discovery
+  - resilience
+  - forgiveness
+  - childhood memories
 ---
 
 Dear father,

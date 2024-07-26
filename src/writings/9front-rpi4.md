@@ -6,6 +6,22 @@ title: "Exploring 9front on my RPi4"
 desc: "My experience to setting up and customizing 9front, a fork of Plan 9, on a Raspberry Pi 4."
 date: "Apr 22, 2022"
 readTime: "2 min read"
+tags:
+  - 9front
+  - Plan 9
+  - Raspberry Pi
+  - operating systems
+  - customization
+  - system configuration
+  - keyboard layout
+  - time synchronization
+  - terminal
+  - rio window manager
+  - werc
+  - web server
+  - DIY computing
+  - alternative OS
+  - system administration
 ---
 
 # Exploring [9front](http://9fs.net/) on my Raspberry Pi 4

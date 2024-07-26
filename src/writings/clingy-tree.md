@@ -5,7 +5,23 @@ category: "philosophy"
 title: "Clingy Tree"
 desc: "Explore the metaphor of a clingy tree and learn to let go of attachments..."
 date: "Sep 29, 2020"
-readTime: "2 min read"
+readTime: "3 min read"
+tags:
+  - philosophy
+  - personal growth
+  - mindfulness
+  - attachment
+  - letting go
+  - relationships
+  - expectations
+  - balance
+  - acceptance
+  - metaphor
+  - self-reflection
+  - emotional wisdom
+  - life lessons
+  - mindset
+  - inner peace
 ---
 Once upon a time there was a young man, who traveled the world. He was in his early 20s when he met the clingy tree. Everything about this tree seemed perfectly normal. The tree had roots, a stem, branches, leaves and in summer, it had bright red fruits. Filling the scene with vivid colors.
 

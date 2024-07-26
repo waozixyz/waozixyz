@@ -1,11 +1,22 @@
 ---
 imgSrc: "/assets/imaginary_house.jpg"
 imgAlt: "Imaginary House"
-category: "drama"
+category: "personal"
 title: "Imaginary House"
 desc: "It all started with a chance encounter that felt like fate. We were meant to be together..."
 date: "Nov 13, 2022"
 readTime: "4 min read"
+tags:
+  - relationships
+  - heartbreak
+  - personal growth
+  - deception
+  - emotional journey
+  - self-reflection
+  - metaphor
+  - healing
+  - loneliness
+  - love
 ---
 Many unexpected things happened, I was just going with my heart. Not having clear directions, just a vague ideas of what I could do. I didn't plan for this to happen, but of course I had wished for an encounter with another. Over the years I have managed to somehow deal with my loneliness, even if it would come back ever so often. Creating a desire inside me to connect with another in a deeper way I had ever done before.
 

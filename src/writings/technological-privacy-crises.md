@@ -5,7 +5,23 @@ category: "technology"
 title: "Technological Privacy Crises"
 desc: "Let me just make a TikTok quickly, OMG look at the food here - I gotta post it on Instagram..."
 date: "Jun 2, 2023"
-readTime: "14 min read"
+readTime: "15 min read"
+tags:
+  - digital privacy
+  - cybersecurity
+  - open source
+  - data sovereignty
+  - encryption
+  - surveillance
+  - tech alternatives
+  - Linux
+  - mobile security
+  - VPN
+  - secure messaging
+  - password management
+  - cloud storage
+  - social media
+  - browser privacy
 ---
 # Going Down the Rabbit Hole...
 When you start digging deeper into how each layer of our everyday technology functions, it might shock you that there are multiple opportunities for the government and big companies to integrate a backdoor that give them unrestricted access to your data, or simple trackers that monitor your everyday move.

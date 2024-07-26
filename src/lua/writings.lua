@@ -18,9 +18,22 @@ local function process_markdown_file(file)
 
     local url = file:gsub("%.md$", "")
     local page_content = config.writing_template
+    
+    local tags_comma_separated = table.concat(metadata.tags or {}, ", ")
+
     for key, value in pairs(metadata) do
-        page_content = page_content:gsub("{{" .. key:upper() .. "}}", value)
+        if key == "tags" then
+            page_content = page_content:gsub("{{TAGS_COMMA_SEPARATED}}", tags_comma_separated)
+            local tags_html = ""
+            for _, tag in ipairs(value) do
+                tags_html = tags_html .. string.format('<span class="tag">%s</span>', tag)
+            end
+            page_content = page_content:gsub("{{#each TAGS}}.-{{/each}}", tags_html)
+        else
+            page_content = page_content:gsub("{{" .. key:upper() .. "}}", tostring(value))
+        end
     end
+    
     page_content = page_content:gsub("{{CONTENT}}", html_content):gsub("{{URL}}", url)
 
     utils.write_file(html_path, page_content)
@@ -32,6 +45,7 @@ local function process_markdown_file(file)
         desc = metadata.desc or "",
         readTime = metadata.readTime or "",
         link = file:gsub("%.md$", ".html"),
+        tags = metadata.tags or {},
         url = url
     }
 end
@@ -46,7 +60,12 @@ function writings.process_writings()
             end
         end
     end
-    table.sort(processed_writings, function(a, b) return utils.parse_date(a.date) > utils.parse_date(b.date) end)
+    table.sort(processed_writings, function(a, b)
+        if utils.parse_date(a.date) == utils.parse_date(b.date) then
+            return table.concat(a.tags or {}) < table.concat(b.tags or {})
+        end
+        return utils.parse_date(a.date) > utils.parse_date(b.date)
+    end)
     return processed_writings
 end
 

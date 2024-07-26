@@ -1,11 +1,23 @@
 ---
 imgSrc: "/assets/gods_game.jpg"
 imgAlt: "God, our reflection greeting us"
-category: "philosophical"
+category: "philosophy"
 title: "God's Game"
 desc: "A reflection on existence, exploring themes of reality, purpose, and the future of humanity."
 date: "Jul 26, 2024"
 readTime: "4 min read"
+tags:
+  - philosophy
+  - existence
+  - God
+  - reality
+  - futurism
+  - politics
+  - dystopia
+  - cryptocurrency
+  - artificial intelligence
+  - spirituality
+  - society
 ---
 
 # Trinity of God's game

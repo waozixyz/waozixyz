@@ -6,6 +6,20 @@ title: "Life RPG: Gamifying Personal Growth"
 desc: "Discover how turning life into a role-playing game can boost motivation and help build positive habits."
 date: "Jul 21, 2024"
 readTime: "2 min read"
+
+tags:
+  - self-improvement
+  - gamification
+  - habit formation
+  - motivation
+  - personal growth
+  - productivity
+  - creativity
+  - mindfulness
+  - lifestyle design
+  - reward systems
+  - routines
+  - personal challenges
 ---
 # Life RPG
 Growing up stuck in the matrix, getting sucked into technology. Losing the true path as we become alienated and detached from the real world.
