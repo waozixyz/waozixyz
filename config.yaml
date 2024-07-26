@@ -5,10 +5,12 @@ templates_dir: "src/templates"
 static_dir: "src/static"
 assets_dir: "src/assets"
 dist_dir: "dist"
-main_template: "main.html"
 writing_template: "writing.html"
 writings_index_template: "writings_index.html"
 projects_index_template: "projects_index.html"
 max_writings: 2
 max_projects_display: 2
 index_file: "src/index.html"
+site_title: "Waozi - Digital Tao"
+site_url: "https://waozi.xyz"
+author_name: "Martin Schiller"

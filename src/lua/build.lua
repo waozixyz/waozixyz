@@ -9,7 +9,6 @@ local html_generation = require "html_generation"
 
 local function main()
     -- Load templates
-    config.main_template = utils.read_file(config.templates_dir .. "/" .. config.main_template)
     config.writing_template = utils.read_file(config.templates_dir .. "/" .. config.writing_template)
 
     -- Setup
