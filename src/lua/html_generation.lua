@@ -8,7 +8,7 @@ function html_generation.generate_writing_section(writings)
     for i = 1, math.min(config.max_writings, #writings) do
         local w = writings[i]
         writing_section = writing_section .. string.format(
-            "<div class=\"writing-card\"><h4><a href=\"writings/%s\">%s</a></h4><p class=\"writing-meta\">Published: %s | %s</p><p class=\"writing-excerpt\">%s</p></div>",
+            "<a href=\"writings/%s\" class=\"writing-card\"><div><h4>%s</h4><p class=\"writing-meta\">Published: %s | %s</p><p class=\"writing-excerpt\">%s</p></div></a>",
             w.link, w.title, w.date, w.readTime, w.desc
         )
     end
