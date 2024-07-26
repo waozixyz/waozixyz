@@ -96,11 +96,22 @@ function utils.sanitize_content(content)
 end
 
 function utils.format_rfc3339_date(date_string)
-    local year, month, day = date_string:match("(%d+)-(%d+)-(%d+)")
-    if year and month and day then
-        return string.format("%s-%02d-%02dT00:00:00Z", year, tonumber(month), tonumber(day))
+    local months = {Jan=1, Feb=2, Mar=3, Apr=4, May=5, Jun=6, Jul=7, Aug=8, Sep=9, Oct=10, Nov=11, Dec=12}
+    local month, day, year = date_string:match("(%a+)%s+(%d+),%s+(%d+)")
+    if month and day and year then
+        return string.format("%s-%02d-%02dT00:00:00Z", year, months[month], tonumber(day))
     else
         return os.date("!%Y-%m-%dT%H:%M:%SZ")  -- fallback to current UTC time if parsing fails
+    end
+end
+
+function utils.format_rfc822_date(date_string)
+    local months = {Jan=1, Feb=2, Mar=3, Apr=4, May=5, Jun=6, Jul=7, Aug=8, Sep=9, Oct=10, Nov=11, Dec=12}
+    local month, day, year = date_string:match("(%a+)%s+(%d+),%s+(%d+)")
+    if month and day and year then
+        return os.date("!%a, %d %b %Y %H:%M:%S GMT", os.time({year=tonumber(year), month=months[month], day=tonumber(day)}))
+    else
+        return os.date("!%a, %d %b %Y %H:%M:%S GMT")  -- fallback to current UTC time if parsing fails
     end
 end
 
