@@ -15,6 +15,7 @@ local function process_markdown_file(file)
     local html_content = utils.shell(string.format("echo '%s' | md2html --github", content:gsub("'", "'\\''")))
     html_content = html_content:gsub("<!DOCTYPE html>.-<body>", ""):gsub("</body></html>", "")
     html_content = html_content:gsub("<p>(<img [^>]+>) ?(<img [^>]+>)</p>", "<div class='image-row'>%1%2</div>")
+    html_content = utils.sanitize_content(html_content)
 
     local url = file:gsub("%.md$", "")
     local page_content = config.writing_template
@@ -47,10 +48,9 @@ local function process_markdown_file(file)
         link = file:gsub("%.md$", ".html"),
         tags = metadata.tags or {},
         url = url,
-        content = html_content or "" -- Add this line
+        content = html_content
     }
 end
-
 function writings.process_writings()
     local processed_writings = {}
     for file in lfs.dir(config.writings_dir) do
@@ -83,14 +83,17 @@ function writings.process_writings()
     local rss_items = {}
 
     for _, writing in ipairs(processed_writings) do
-        local pub_date = os.date("!%Y-%m-%dT%H:%M:%SZ", utils.parse_date(writing.date))
-        local rfc822_date = os.date("!%a, %d %b %Y %H:%M:%S GMT", utils.parse_date(writing.date))
+        local pub_date = utils.format_rfc3339_date(writing.date)
+        local rfc822_date = os.date("!%a, %d %b %Y %H:%M:%S GMT", os.time(os.date("!*t", utils.parse_date(writing.date))))
         
-        local categories = {}
+        local atom_categories = {}
+        local rss_categories = {}
         for _, tag in ipairs(writing.tags or {}) do
-            table.insert(categories, string.format('    <category term="%s"/>', utils.escape_xml(tag)))
+            table.insert(atom_categories, string.format('    <category term="%s"/>', utils.escape_xml(tag)))
+            table.insert(rss_categories, string.format('    <category>%s</category>', utils.escape_xml(tag)))
         end
-        categories = table.concat(categories, "\n")
+        atom_categories = table.concat(atom_categories, "\n")
+        rss_categories = table.concat(rss_categories, "\n")
 
         table.insert(atom_entries, string.format(
             '<entry>\n' ..
@@ -111,8 +114,8 @@ function writings.process_writings()
             pub_date,
             pub_date,
             writing.desc or "",
-            writing.content or "",
-            categories
+            writing.content,
+            atom_categories
         ))
 
         table.insert(rss_items, string.format(
@@ -130,19 +133,27 @@ function writings.process_writings()
             common_data.site_url,
             writing.url,
             rfc822_date,
-            writing.content or "",
-            categories
+            writing.content,
+            rss_categories
         ))
     end
 
     -- Generate Atom feed
     local atom_template = utils.read_file(config.templates_dir .. "/atom.xml")
-    local atom_content = string.gsub(atom_template, "{{(%w+)}}", common_data)
+    local atom_content = atom_template
+    atom_content = atom_content:gsub("{{SITE_TITLE}}", common_data.site_title)
+    atom_content = atom_content:gsub("{{SITE_URL}}", common_data.site_url)
+    atom_content = atom_content:gsub("{{CURRENT_DATE}}", common_data.current_date)
+    atom_content = atom_content:gsub("{{AUTHOR_NAME}}", common_data.author_name)
     atom_content = atom_content:gsub("{{ENTRIES}}", table.concat(atom_entries, "\n"))
 
     -- Generate RSS feed
     local rss_template = utils.read_file(config.templates_dir .. "/rss.xml")
-    local rss_content = string.gsub(rss_template, "{{(%w+)}}", common_data)
+    local rss_content = rss_template
+    rss_content = rss_content:gsub("{{SITE_TITLE}}", common_data.site_title)
+    rss_content = rss_content:gsub("{{SITE_URL}}", common_data.site_url)
+    rss_content = rss_content:gsub("{{SITE_DESCRIPTION}}", common_data.site_description)
+    rss_content = rss_content:gsub("{{CURRENT_DATE_RFC822}}", common_data.current_date_rfc822)
     rss_content = rss_content:gsub("{{ITEMS}}", table.concat(rss_items, "\n"))
 
     utils.write_file(config.dist_dir .. "/feed.atom", atom_content)
@@ -150,5 +161,4 @@ function writings.process_writings()
 
     return processed_writings
 end
-
 return writings

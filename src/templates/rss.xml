@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 <channel>
-  <title>{{SITE_TITLE}}</title>
-  <link>{{SITE_URL}}</link>
-  <description>{{SITE_DESCRIPTION}}</description>
-  <atom:link href="{{SITE_URL}}/feed.xml" rel="self" type="application/rss+xml" />
-  <language>en-us</language>
-  <lastBuildDate>{{CURRENT_DATE_RFC822}}</lastBuildDate>
-  <pubDate>{{CURRENT_DATE_RFC822}}</pubDate>
-  <ttl>1800</ttl>
-
-  {{ITEMS}}
+    <title>{{SITE_TITLE}}</title>
+    <link>{{SITE_URL}}</link>
+    <description>{{SITE_DESCRIPTION}}</description>
+    <atom:link href="{{SITE_URL}}/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <lastBuildDate>{{CURRENT_DATE_RFC822}}</lastBuildDate>
+    <pubDate>{{CURRENT_DATE_RFC822}}</pubDate>
+    <ttl>1800</ttl>
+    {{ITEMS}}
 </channel>
 </rss>

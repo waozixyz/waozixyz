@@ -90,4 +90,18 @@ function utils.escape_xml(s)
              :gsub('"', "&quot;")
 end
 
+
+function utils.sanitize_content(content)
+    return content:gsub("</entry>", "")  -- Remove any </entry> tags from the content
+end
+
+function utils.format_rfc3339_date(date_string)
+    local year, month, day = date_string:match("(%d+)-(%d+)-(%d+)")
+    if year and month and day then
+        return string.format("%s-%02d-%02dT00:00:00Z", year, tonumber(month), tonumber(day))
+    else
+        return os.date("!%Y-%m-%dT%H:%M:%SZ")  -- fallback to current UTC time if parsing fails
+    end
+end
+
 return utils
