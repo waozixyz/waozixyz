@@ -107,6 +107,9 @@ local function generate_rss_feed(processed_writings, common_data)
         end
         rss_categories = table.concat(rss_categories, "\n")
 
+        -- Convert relative URLs to absolute URLs in the content
+        local content_with_absolute_urls = writing.content:gsub("src=\"../", string.format("src=\"%s/", common_data.site_url))
+
         table.insert(rss_items, string.format(
             '<item>\n' ..
             '    <title>%s</title>\n' ..
@@ -122,7 +125,7 @@ local function generate_rss_feed(processed_writings, common_data)
             common_data.site_url,
             writing.url,
             rfc822_date,
-            writing.content,
+            content_with_absolute_urls,
             rss_categories
         ))
     end
@@ -132,7 +135,12 @@ local function generate_rss_feed(processed_writings, common_data)
     rss_content = rss_content:gsub("{{SITE_TITLE}}", common_data.site_title)
     rss_content = rss_content:gsub("{{SITE_URL}}", common_data.site_url)
     rss_content = rss_content:gsub("{{SITE_DESCRIPTION}}", common_data.site_description)
-    rss_content = rss_content:gsub("{{CURRENT_DATE_RFC822}}", utils.format_rfc822_date(processed_writings[1].date))
+    
+    -- Use the date of the most recent writing for lastBuildDate and pubDate
+    local most_recent_date = utils.format_rfc822_date(processed_writings[1].date)
+    rss_content = rss_content:gsub("{{LAST_BUILD_DATE}}", most_recent_date)
+    rss_content = rss_content:gsub("{{PUB_DATE}}", most_recent_date)
+    
     rss_content = rss_content:gsub("{{ITEMS}}", table.concat(rss_items, "\n"))
 
     return rss_content
