@@ -51,7 +51,6 @@ local function process_markdown_file(file)
     }
 end
 
-
 function writings.process_writings()
     local processed_writings = {}
     for file in lfs.dir(config.writings_dir) do
@@ -68,22 +67,32 @@ function writings.process_writings()
         end
         return utils.parse_date(a.date) > utils.parse_date(b.date)
     end)
-    -- Generate RSS feed
-    local rss_template = utils.read_file(config.templates_dir .. "/atom.xml")
-    local rss_content = rss_template
-    rss_content = rss_content:gsub("{{SITE_TITLE}}", config.site_title)
-    rss_content = rss_content:gsub("{{SITE_URL}}", config.site_url)
-    rss_content = rss_content:gsub("{{CURRENT_DATE}}", os.date("!%Y-%m-%dT%H:%M:%SZ"))
-    rss_content = rss_content:gsub("{{AUTHOR_NAME}}", config.author_name)
 
-    local entries = ""
+    -- Prepare common data
+    local common_data = {
+        site_title = config.site_title,
+        site_url = config.site_url,
+        site_description = config.site_description,
+        current_date = os.date("!%Y-%m-%dT%H:%M:%SZ"),
+        current_date_rfc822 = os.date("!%a, %d %b %Y %H:%M:%S GMT"),
+        author_name = config.author_name
+    }
+
+    -- Generate feeds
+    local atom_entries = {}
+    local rss_items = {}
+
     for _, writing in ipairs(processed_writings) do
-        local categories = ""
+        local pub_date = os.date("!%Y-%m-%dT%H:%M:%SZ", utils.parse_date(writing.date))
+        local rfc822_date = os.date("!%a, %d %b %Y %H:%M:%S GMT", utils.parse_date(writing.date))
+        
+        local categories = {}
         for _, tag in ipairs(writing.tags or {}) do
-            categories = categories .. string.format('    <category term="%s"/>\n', utils.escape_xml(tag))
+            table.insert(categories, string.format('    <category term="%s"/>', utils.escape_xml(tag)))
         end
+        categories = table.concat(categories, "\n")
 
-        local entry = string.format(
+        table.insert(atom_entries, string.format(
             '<entry>\n' ..
             '    <title>%s</title>\n' ..
             '    <link href="%s/writings/%s"/>\n' ..
@@ -92,26 +101,52 @@ function writings.process_writings()
             '    <updated>%s</updated>\n' ..
             '    <summary type="html"><![CDATA[%s]]></summary>\n' ..
             '    <content type="html"><![CDATA[%s]]></content>\n' ..
-            '%s' ..
-            '</entry>\n',
+            '%s\n' ..
+            '</entry>',
             utils.escape_xml(writing.title or ""),
-            config.site_url,
+            common_data.site_url,
             writing.url,
-            config.site_url,
+            common_data.site_url,
             writing.url,
-            os.date("!%Y-%m-%dT%H:%M:%SZ", utils.parse_date(writing.date)),
-            os.date("!%Y-%m-%dT%H:%M:%SZ", utils.parse_date(writing.date)),
+            pub_date,
+            pub_date,
             writing.desc or "",
             writing.content or "",
             categories
-        )
-        
-        entries = entries .. entry
+        ))
+
+        table.insert(rss_items, string.format(
+            '<item>\n' ..
+            '    <title>%s</title>\n' ..
+            '    <link>%s/writings/%s</link>\n' ..
+            '    <guid>%s/writings/%s</guid>\n' ..
+            '    <pubDate>%s</pubDate>\n' ..
+            '    <description><![CDATA[%s]]></description>\n' ..
+            '%s\n' ..
+            '</item>',
+            utils.escape_xml(writing.title or ""),
+            common_data.site_url,
+            writing.url,
+            common_data.site_url,
+            writing.url,
+            rfc822_date,
+            writing.content or "",
+            categories
+        ))
     end
 
-    rss_content = rss_content:gsub("{{ENTRIES}}", entries)
+    -- Generate Atom feed
+    local atom_template = utils.read_file(config.templates_dir .. "/atom.xml")
+    local atom_content = string.gsub(atom_template, "{{(%w+)}}", common_data)
+    atom_content = atom_content:gsub("{{ENTRIES}}", table.concat(atom_entries, "\n"))
 
-    utils.write_file(config.dist_dir .. "/feed.atom", rss_content)
+    -- Generate RSS feed
+    local rss_template = utils.read_file(config.templates_dir .. "/rss.xml")
+    local rss_content = string.gsub(rss_template, "{{(%w+)}}", common_data)
+    rss_content = rss_content:gsub("{{ITEMS}}", table.concat(rss_items, "\n"))
+
+    utils.write_file(config.dist_dir .. "/feed.atom", atom_content)
+    utils.write_file(config.dist_dir .. "/feed.xml", rss_content)
 
     return processed_writings
 end

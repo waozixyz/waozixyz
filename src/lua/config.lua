@@ -14,7 +14,7 @@ local config = load_config()
 local required_fields = {
     "writings_dir", "naox_projects_file", "waozi_projects_file",
     "templates_dir", "static_dir", "assets_dir", "dist_dir",
-    "writing_template", "writings_index_template", "projects_index_template",
+    "writing_template", "writings_index_template", "projects_index_template", "site_description",
     "max_writings", "max_projects_display", "index_file", "site_title", "site_url", "author_name"
 }
 
