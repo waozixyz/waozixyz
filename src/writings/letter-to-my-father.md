@@ -5,7 +5,7 @@ category: "Personal growth"
 title: "Letter to My Father"
 desc: "A reflection on my personal father-son relationship, exploring themes of abandonment, growth, and healing."
 date: "May 25, 2023"
-readTime: "5 min read"
+readTime: "4 min read"
 tags:
   - family
   - father-son relationship

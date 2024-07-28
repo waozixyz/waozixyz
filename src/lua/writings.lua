@@ -48,41 +48,64 @@ local function process_markdown_file(file)
         link = file:gsub("%.md$", ".html"),
         tags = metadata.tags or {},
         url = url,
-        content = html_content
+        content = html_content,
+        imgsource = metadata.imgsource or "" 
+    }
+end
+
+local function generate_feed_item(writing, common_data, is_rss)
+    local date_format = is_rss and utils.format_rfc822_date or utils.format_rfc3339_date
+    local pub_date = date_format(writing.date)
+    
+    local categories = {}
+    for _, tag in ipairs(writing.tags or {}) do
+        table.insert(categories, is_rss 
+            and string.format('    <category>%s</category>', utils.escape_xml(tag))
+            or string.format('    <category term="%s"/>', utils.escape_xml(tag)))
+    end
+    local categories_string = table.concat(categories, "\n")
+
+    local content = writing.content
+    local cover_image = ""
+    if writing.imgsource and writing.imgsource ~= "" then
+        cover_image = string.format('    <media:thumbnail url="%s"/>\n', utils.escape_xml(writing.imgsource))
+        content = string.format('<img src="%s" alt="Cover image" />\n', utils.escape_xml(writing.imgsource)) .. content
+    end
+
+    if is_rss then
+        content = content:gsub("src=\"../", string.format("src=\"%s/", common_data.site_url))
+    end
+
+    return {
+        title = utils.escape_xml(writing.title or ""),
+        link = string.format("%s/writings/%s", common_data.site_url, writing.url),
+        guid = string.format("%s/writings/%s", common_data.site_url, writing.url),
+        pub_date = pub_date,
+        description = writing.desc or "",
+        content = content,
+        categories = categories_string,
+        cover_image = cover_image
     }
 end
 
 local function generate_atom_feed(processed_writings, common_data)
     local atom_entries = {}
     for _, writing in ipairs(processed_writings) do
-        local pub_date = utils.format_rfc3339_date(writing.date)
-        local atom_categories = {}
-        for _, tag in ipairs(writing.tags or {}) do
-            table.insert(atom_categories, string.format('    <category term="%s"/>', utils.escape_xml(tag)))
-        end
-        atom_categories = table.concat(atom_categories, "\n")
-
+        local item = generate_feed_item(writing, common_data, false)
         table.insert(atom_entries, string.format(
             '<entry>\n' ..
             '    <title>%s</title>\n' ..
-            '    <link href="%s/writings/%s"/>\n' ..
-            '    <id>%s/writings/%s</id>\n' ..
+            '    <link href="%s"/>\n' ..
+            '    <id>%s</id>\n' ..
             '    <published>%s</published>\n' ..
             '    <updated>%s</updated>\n' ..
             '    <summary type="html"><![CDATA[%s]]></summary>\n' ..
             '    <content type="html"><![CDATA[%s]]></content>\n' ..
             '%s\n' ..
+            '%s' ..
             '</entry>',
-            utils.escape_xml(writing.title or ""),
-            common_data.site_url,
-            writing.url,
-            common_data.site_url,
-            writing.url,
-            pub_date,
-            pub_date, -- Using the same date for updated, as we don't have separate update dates
-            writing.desc or "",
-            writing.content,
-            atom_categories
+            item.title, item.link, item.guid, item.pub_date, item.pub_date,
+            item.description, item.content, item.categories, item.cover_image
         ))
     end
 
@@ -100,33 +123,19 @@ end
 local function generate_rss_feed(processed_writings, common_data)
     local rss_items = {}
     for _, writing in ipairs(processed_writings) do
-        local rfc822_date = utils.format_rfc822_date(writing.date)
-        local rss_categories = {}
-        for _, tag in ipairs(writing.tags or {}) do
-            table.insert(rss_categories, string.format('    <category>%s</category>', utils.escape_xml(tag)))
-        end
-        rss_categories = table.concat(rss_categories, "\n")
-
-        -- Convert relative URLs to absolute URLs in the content
-        local content_with_absolute_urls = writing.content:gsub("src=\"../", string.format("src=\"%s/", common_data.site_url))
-
+        local item = generate_feed_item(writing, common_data, true)
         table.insert(rss_items, string.format(
             '<item>\n' ..
             '    <title>%s</title>\n' ..
-            '    <link>%s/writings/%s</link>\n' ..
-            '    <guid>%s/writings/%s</guid>\n' ..
+            '    <link>%s</link>\n' ..
+            '    <guid>%s</guid>\n' ..
             '    <pubDate>%s</pubDate>\n' ..
             '    <description><![CDATA[%s]]></description>\n' ..
             '%s\n' ..
+            '%s' ..
             '</item>',
-            utils.escape_xml(writing.title or ""),
-            common_data.site_url,
-            writing.url,
-            common_data.site_url,
-            writing.url,
-            rfc822_date,
-            content_with_absolute_urls,
-            rss_categories
+            item.title, item.link, item.guid, item.pub_date,
+            item.content, item.categories, item.cover_image
         ))
     end
 
@@ -136,7 +145,6 @@ local function generate_rss_feed(processed_writings, common_data)
     rss_content = rss_content:gsub("{{SITE_URL}}", common_data.site_url)
     rss_content = rss_content:gsub("{{SITE_DESCRIPTION}}", common_data.site_description)
     
-    -- Use the date of the most recent writing for lastBuildDate and pubDate
     local most_recent_date = utils.format_rfc822_date(processed_writings[1].date)
     rss_content = rss_content:gsub("{{LAST_BUILD_DATE}}", most_recent_date)
     rss_content = rss_content:gsub("{{PUB_DATE}}", most_recent_date)
@@ -145,7 +153,6 @@ local function generate_rss_feed(processed_writings, common_data)
 
     return rss_content
 end
-
 function writings.process_writings()
     local processed_writings = {}
     for file in lfs.dir(config.writings_dir) do

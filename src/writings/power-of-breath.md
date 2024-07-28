@@ -5,7 +5,7 @@ category: "Philosophy & Environment"
 title: "The Power of Breath: Our Connection to Gaia"
 desc: "Explore the profound connection between our breath, nature, and the challenges of modern existence in a world increasingly dominated by artificial systems."
 date: "Jul 28, 2024"
-readTime: "3 min read"
+readTime: "1 min read"
 
 tags:
   - breath
