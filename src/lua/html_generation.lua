@@ -7,12 +7,45 @@ function html_generation.generate_writing_section(writings)
     local writing_section = "<section id=\"writings\" class=\"writings fade-in\"><h3>Writings - Thoughts Adrift in the Digital Sea</h3><div class=\"writing-grid\">"
     for i = 1, math.min(config.max_writings, #writings) do
         local w = writings[i]
-        writing_section = writing_section .. string.format(
-            "<a href=\"writings/%s\" class=\"writing-card\"><div><h4>%s</h4><p class=\"writing-meta\">Published: %s | %s</p><p class=\"writing-excerpt\">%s</p></div></a>",
-            w.link, w.title, w.date, w.readTime, w.desc
-        )
+        local image_src = w.imgSrc or "/assets/default-cover.jpg"
+        local image_alt = w.imgAlt or w.title
+        writing_section = writing_section .. string.format([[
+            <a href="writings/%s" class="writing-card">
+                <div class="card-image">
+                    <img src="%s" alt="%s">
+                </div>
+                <div class="card-content">
+                    <h4>%s</h4>
+                    <p class="writing-meta">Published: %s | %s</p>
+                    <p class="writing-excerpt">%s</p>
+                </div>
+            </a>
+        ]], w.link, image_src, image_alt, w.title, w.date, w.readTime, w.desc)
     end
     return writing_section .. "</div><a href=\"writings/\" class=\"more-btn\">More Writings</a></section>"
+end
+
+function html_generation.generate_project_cards(projects, max_display)
+    table.sort(projects, function(a, b) return a.updated > b.updated end)
+    local cards = ""
+    for i = 1, math.min(max_display, #projects) do
+        local project = projects[i]
+        local image_src = project.imgSrc or "/assets/default-project.jpg"
+        local image_alt = project.imgAlt or project.name
+        cards = cards .. string.format([[
+            <a href="%s" class="project-card">
+                <div class="card-image">
+                    <img src="%s" alt="%s">
+                </div>
+                <div class="card-content">
+                    <h3>%s</h3>
+                    <p class="project-meta">%s | %s | Updated: %s</p>
+                    <p class="project-excerpt">%s</p>
+                </div>
+            </a>
+        ]], project.url, image_src, image_alt, project.name, project.description, project.version, project.updated, project.excerpt)
+    end
+    return cards
 end
 
 function html_generation.update_main_index(writing_section, projects_section)
@@ -56,21 +89,6 @@ function html_generation.generate_writings_index(writings)
         :gsub("{{BACK_TEXT}}", "Back to Waozi")
 
     utils.write_file(config.dist_dir .. "/writings/index.html", writings_index)
-end
-function html_generation.generate_project_cards(projects, max_display)
-    table.sort(projects, function(a, b) return a.updated > b.updated end)
-    local cards = ""
-    for i = 1, math.min(max_display, #projects) do
-        local project = projects[i]
-        cards = cards .. string.format([[
-            <a href="%s" class="app-card">
-                <h3>%s</h3>
-                <p class="app-meta">%s | %s | Updated: %s</p>
-                <p class="app-excerpt">%s</p>
-            </a>
-        ]], project.url, project.name, project.description, project.version, project.updated, project.excerpt)
-    end
-    return cards
 end
 
 function html_generation.generate_projects_section()
