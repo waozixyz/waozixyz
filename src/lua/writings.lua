@@ -36,8 +36,9 @@ local function process_markdown_file(file)
         end
     end
     
-    page_content = page_content:gsub("{{CONTENT}}", html_content):gsub("{{URL}}", url)
-
+    page_content = page_content:gsub("{{CONTENT}}", function() return html_content end)
+    page_content = page_content:gsub("{{URL}}", function() return url end)
+    
     utils.write_file(html_path, page_content)
 
     return {
@@ -130,8 +131,7 @@ local function generate_atom_feed(processed_writings, common_data)
     atom_content = atom_content:gsub("{{SITE_URL}}", common_data.site_url)
     atom_content = atom_content:gsub("{{CURRENT_DATE}}", utils.format_rfc3339_date(processed_writings[1].date))
     atom_content = atom_content:gsub("{{AUTHOR_NAME}}", common_data.author_name)
-    atom_content = atom_content:gsub("{{ENTRIES}}", table.concat(atom_entries, "\n"))
-
+    atom_content = atom_content:gsub("{{ENTRIES}}", function() return table.concat(atom_entries, "\n") end)
     return atom_content
 end
 
@@ -163,9 +163,7 @@ local function generate_rss_feed(processed_writings, common_data)
     local most_recent_date = utils.format_rfc822_date(processed_writings[1].date)
     rss_content = rss_content:gsub("{{LAST_BUILD_DATE}}", most_recent_date)
     rss_content = rss_content:gsub("{{PUB_DATE}}", most_recent_date)
-    
-    rss_content = rss_content:gsub("{{ITEMS}}", table.concat(rss_items, "\n"))
-
+    rss_content = rss_content:gsub("{{ITEMS}}", function() return table.concat(rss_items, "\n") end)
     return rss_content
 end
 function writings.process_writings()
