@@ -5,7 +5,7 @@ category: "Philosophy & Environment"
 title: "The Power of Breath: Our Connection to Gaia"
 desc: "All is connected, breath is powerful medium of information exchange between organisms and systems."
 date: "Jul 28, 2024"
-readTime: "1 min read"
+readTime: "2 min read"
 
 tags:
   - breath
