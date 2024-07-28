@@ -26,26 +26,37 @@ function html_generation.update_main_index(writing_section, projects_section)
     index_content = index_content:gsub('<section id="projects" class="projects fade%-in">.-</section>', projects_section)
     utils.write_file(config.dist_dir .. "/index.html", index_content)
 end
-
 function html_generation.generate_writings_index(writings)
     local writings_index_template = utils.read_file(config.templates_dir .. "/" .. config.writings_index_template)
     
-    local writing_list = ""
+    local writing_cards = ""
     for _, w in ipairs(writings) do
-        writing_list = writing_list .. string.format("<li><a href=\"%s\">%s</a> - %s</li>", w.link, w.title, w.date)
+        local image_src = w.imgSrc or "/assets/default-cover.jpg"  -- Use a default image if none is provided
+        local image_alt = w.imgAlt or w.title
+        writing_cards = writing_cards .. string.format([[
+            <a href="%s" class="writing-card">
+                <div class="card-image">
+                    <img src="%s" alt="%s">
+                </div>
+                <div class="card-content">
+                    <h3>%s</h3>
+                    <p class="writing-desc">%s</p>
+                    <p class="writing-meta">Published: %s | %s</p>
+                </div>
+            </a>
+        ]], w.link, image_src, image_alt, w.title, w.desc, w.date, w.readTime)
     end
 
     local writings_index = writings_index_template
         :gsub("{{TITLE}}", "Waozi Writings - Digital Reflections")
         :gsub("{{HEADER}}", "Waozi Writings")
         :gsub("{{SUBHEADER}}", "Thoughts adrift in the digital sea")
-        :gsub("{{WRITING_LIST}}", writing_list)
+        :gsub("{{WRITING_CARDS}}", writing_cards)
         :gsub("{{BACK_LINK}}", "../index.html")
         :gsub("{{BACK_TEXT}}", "Back to Waozi")
 
     utils.write_file(config.dist_dir .. "/writings/index.html", writings_index)
 end
-
 function html_generation.generate_project_cards(projects, max_display)
     table.sort(projects, function(a, b) return a.updated > b.updated end)
     local cards = ""
