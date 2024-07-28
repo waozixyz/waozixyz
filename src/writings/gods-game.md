@@ -65,7 +65,7 @@ We are currently on this timeline in the west. Post modernism put to the extreme
 
 Anyone can be anything, there are no limits.. A short lived reality, as it either will engulf us in flames or sterilize us completely with their drugs and mind viruses.
 
-On this timeline the west will experience a total utter collapse. As we are not meant to enter the next phase. When we chose left, we choose the government to "protect" us. We give our liberty away so we can be "free" and have horny furries running out. Letting degeneracy and satanitism be the norm. We fully give ourselves to Satan.
+On this timeline the west will experience a total utter collapse. As we are not meant to enter the next phase. When we chose left, we choose the government to "protect" us. We give our liberty away so we can be "free" and have horny furries running around. Letting degeneracy and satanitism be the norm. We fully give ourselves to Satan.
 
 Not long after we shall awaken as a new species on earth. Our human society deep under rubble. The new species will be far more mature than us. Yet by then it will already be too late...
 
