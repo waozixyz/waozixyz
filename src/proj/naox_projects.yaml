@@ -4,6 +4,9 @@
   version: v1.3.3
   updated: 2024-07-23
   excerpt: Find serenity in every breath with guided meditation...
+  imgSrc: "/assets/projects/inner_breeze.jpg"
+  imgAlt: "MyLife Project Screenshot"
+
 
 - name: Ukuvota
   url: https://ukuvota.world
@@ -11,3 +14,5 @@
   version: v1.0.4
   updated: 2024-05-03
   excerpt: Empower precise, consensus-driven decision making...
+  imgSrc: "/assets/projects/ukuvota.png"
+  imgAlt: "Ukuvota logo Image"

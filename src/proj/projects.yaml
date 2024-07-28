@@ -4,6 +4,8 @@
   version: v1.1
   updated: 2024-07-25
   excerpt: Visualize your life events on an interactive timeline.
+  imgSrc: "/assets/projects/mylife.jpg"
+  imgAlt: "MyLife Project Screenshot"
 
 - name: Pixelflux
   url: https://pixelflux.waozi.xyz/
@@ -11,6 +13,8 @@
   version: v1.0
   updated: 2024-02-11
   excerpt: Claim, customize, and trade pixel layers in this unique blockchain game...
+  imgSrc: "/assets/projects/pixelflux.jpg"
+  imgAlt: "Pixelflux Game"
 
 - name: Geocats
   url: https://geocats.waozi.xyz/
@@ -18,4 +22,5 @@
   version: v420-Demo
   updated: 2022-04-15
   excerpt: Join the Geocats in their quest to restore peace to Geoterra...
-  
+  imgSrc: "/assets/projects/geocats.png"
+  imgAlt: "Geocats Game"

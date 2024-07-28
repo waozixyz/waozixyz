@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/clingy_tree.jpg"
+imgSrc: "/assets/writins/clingy_tree.jpg"
 imgAlt: "Clingy Tree"
 category: "Philosophy & Personal growth"
 title: "Clingy Tree"

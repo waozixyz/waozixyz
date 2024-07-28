@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/breath_is_power.jpg"
+imgSrc: "/assets/writings/breath_is_power.jpg"
 imgAlt: "A humanoid robot, with a brain from nature"
 category: "Philosophy & Environment"
 title: "The Power of Breath: Our Connection to Gaia"

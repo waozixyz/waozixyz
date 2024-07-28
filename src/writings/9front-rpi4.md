@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/glenda_space.png"
+imgSrc: "/assets/writings/glenda_space.png"
 imgAlt: "Glenda Space"
 category: "Technology & How-to"
 title: "Exploring 9front on my RPi4"
@@ -67,7 +67,7 @@ Once you got themes working go to:
 
 and simply follow the short guide to my rio background fix:
 
-> [rio-background-fix](/assets/rio-background-fix.txt)
+> [rio-background-fix](/assets/writings/rio-background-fix.txt)
 
 For some reason the background is buggy until the rio window is resized, so the "bug fix" I made is just a stripped down version of the resized function in rio.c and I put it in redraw to execute it once since I did not know where else to put it to make sure it is run once at the start.
 

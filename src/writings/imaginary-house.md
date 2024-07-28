@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/imaginary_house.jpg"
+imgSrc: "/assets/writings/imaginary_house.jpg"
 imgAlt: "Imaginary House"
 category: "Personal growth"
 title: "Imaginary House"

@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/technology_crisis.jpg"
+imgSrc: "/assets/writings/technology_crisis.jpg"
 imgAlt: "Technological Privacy Crises"
 category: "Technology & Privacy"
 title: "Technological Privacy Crises"
@@ -64,7 +64,7 @@ In this article however I will be focusing on the software part and not hardware
 
 Below I have devised a comprehensive list of software tools of everyday applications that I find extremely useful to protect my data.
 
-![Cyborg Love](/assets/cyborg_love.jpg)
+![Cyborg Love](/assets/writings/cyborg_love.jpg)
 
 # Improving your data sovereignty.
 Finding alternatives to our everyday tools can be time consuming and can require deeper technological knowledge to evaluate what a good alternative needs to have. I have invested hundreds of hours to find the best applications that will give you more data privacy and sovereignty.
@@ -264,7 +264,7 @@ Thus you only need to remember one combination and you can generate a unique pas
 
 Lastly if finding an alternative way for generating or storing passwords is too much hassle, using the Brave default password manager will give you decent protection and allow you to sync your password between your Brave installations. Giving you the convenience you might be used to.
 
-![Cyber Rabbit](/assets/rabbit.jpg)
+![Cyber Rabbit](/assets/writings/rabbit.jpg)
 
 # Finding your own way
 The journey to finding what works for you can be long and the willingness to try something new even longer. What is important is taking small steps and understanding the threat we are facing if governments know our every move and we have no privacy.

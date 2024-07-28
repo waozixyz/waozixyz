@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/life_rpg.jpg"
+imgSrc: "/assets/writings/life_rpg.jpg"
 imgAlt: "Life RPG setup with tokens and a box"
 category: "Self-Help"
 title: "Life RPG: Gamifying Personal Growth"
@@ -41,7 +41,7 @@ I design a token, for example my waozi token.
 
 I sign each and every token I "print", by scribling on a piece of paper and cutting it up into little squares I add to my "bank".
 
-![Cutting up my waozi tokens](../assets/life-rpg/cutting_tokens.jpg)
+![Cutting up my waozi tokens](../assets/writings/life-rpg/cutting_tokens.jpg)
 
 > cutting up my woazi tokens
 
@@ -51,19 +51,19 @@ I then design quests I can do to gain these tokens.
 
 I usually come up with a few dailies. Such as swim in the cold lake. Do the wim hof breathing technique and do 10 push ups.
 
-![stopwatch showing how long i stayed in the water](../assets/life-rpg/stopwatch.jpg)
+![stopwatch showing how long i stayed in the water](../assets/writings/life-rpg/stopwatch.jpg)
 > I would usually swim between 5-10 min in the icey lake shown in the cover photo
 
 After finishing a quest I would receive a fair amount of tokens. I add the tokens to my wallet manually and then I can enjoy my own little shop.
 
-![A pipe displayed in the shop](../assets/life-rpg/pipe_shop.jpg)
+![A pipe displayed in the shop](../assets/writings/life-rpg/pipe_shop.jpg)
 > Stainless steel pipe to smoke hash or weed
 
 One of these items I would indulge myself with my tokens is smoking my pipe. With this strategy I managed to keep building my routine and keep my consumption balanced.
 
 At other times when I was not consuming I would reward myself with playtime or watch time. Paying tokens to watch an episode or play a videogame for an hour.
 
-![My life RPG setup in Portugal](../assets/life-rpg/liferpg_setup_pt.jpg)
+![My life RPG setup in Portugal](../assets/writings/life-rpg/liferpg_setup_pt.jpg)
 > Life RPG setup in my Caravan while staying in Portugal
 
 The beauty about this game is that you can make it as simple or as complex as you want. And constantly calibrate with your current possibilities.

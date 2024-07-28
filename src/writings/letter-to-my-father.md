@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/father_letter.jpg"
+imgSrc: "/assets/writings/father_letter.jpg"
 imgAlt: "A father and a son heading to a sailing boat"
 category: "Personal growth"
 title: "Letter to My Father"

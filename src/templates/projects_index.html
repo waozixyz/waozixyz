@@ -6,12 +6,76 @@
     <title>{{TITLE}}</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+        body {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .card-image {
+            height: 150px;
+            overflow: hidden;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .project-category {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .project-desc {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .project-meta {
+            font-size: 0.8em;
+            color: #666;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{HEADER}}</h1>
-    <ul>
-        {{PROJECT_LIST}}
-    </ul>
-    <a href="../index.html">Back to Home</a>
+    <div class="page-header">
+        <h1>{{HEADER}}</h1>
+    </div>
+    <div class="projects-grid">
+        {{PROJECT_CARDS}}
+    </div>
+    <a href="../index.html" class="back-link">Back to Home</a>
 </body>
 </html>
