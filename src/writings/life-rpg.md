@@ -68,7 +68,7 @@ At other times when I was not consuming I would reward myself with playtime or w
 
 The beauty about this game is that you can make it as simple or as complex as you want. And constantly calibrate with your current possibilities.
 
-![My life Box](../assets/life-rpg/lifebox_above.jpg) ![](../assets/life-rpg/lifebox_front.jpg)
+![My life Box](../assets/writings/life-rpg/lifebox_above.jpg) ![](../assets/writings/life-rpg/lifebox_front.jpg)
 > My "life" box, each day separated into a new section in a box
 
 During the plandemic, I ended up extending the LIFE RPG game into an entire Life Box, where i would split each day into separate chakras and focus on the energy of that day. The game is meant to be fun.
