@@ -70,7 +70,7 @@ On this timeline the west will experience a total utter collapse. As we are not 
 Not long after we shall awaken as a new species on earth. Our human society deep under rubble. The new species will be far more mature than us. Yet by then it will already be too late...
 
 ## Third Way
-![Wonderkind](../writings/assets/gods-game/wonderkind.jpeg)
+![Wonderkind](../assets/writings/gods-game/wonderkind.jpeg)
 
 From one dystopia to another, the pendulum swings. Ah, too much to the left. Oh no we are going too much to the right. The fine balance becomes harder to maintain, as we start to oscillate faster. Neither side can be truly evil, neither side truly good, as they are both part human, part devil and part god. We are not to follow, but balance. Find the middle path, and start believing in yourself. Everyone is stuck in their mind, influenced by others. Have we all lost sight of God?
 
