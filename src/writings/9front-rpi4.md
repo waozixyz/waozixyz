@@ -1,7 +1,7 @@
 ---
 imgSrc: "/assets/glenda_space.png"
 imgAlt: "Glenda Space"
-category: "technology"
+category: "Technology & How-to"
 title: "Exploring 9front on my RPi4"
 desc: "My experience to setting up and customizing 9front, a fork of Plan 9, on a Raspberry Pi 4."
 date: "Apr 22, 2022"

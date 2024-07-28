@@ -1,7 +1,7 @@
 ---
 imgSrc: "/assets/imaginary_house.jpg"
 imgAlt: "Imaginary House"
-category: "personal"
+category: "Personal growth"
 title: "Imaginary House"
 desc: "It all started with a chance encounter that felt like fate. We were meant to be together..."
 date: "Nov 13, 2022"

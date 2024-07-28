@@ -1,7 +1,7 @@
 ---
 imgSrc: "/assets/clingy_tree.jpg"
 imgAlt: "Clingy Tree"
-category: "philosophy"
+category: "Philosophy & Personal growth"
 title: "Clingy Tree"
 desc: "Explore the metaphor of a clingy tree and learn to let go of attachments..."
 date: "Sep 29, 2020"

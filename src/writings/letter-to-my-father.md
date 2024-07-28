@@ -1,7 +1,7 @@
 ---
 imgSrc: "/assets/father_letter.jpg"
 imgAlt: "A father and a son heading to a sailing boat"
-category: "personal"
+category: "Personal growth"
 title: "Letter to My Father"
 desc: "A reflection on my personal father-son relationship, exploring themes of abandonment, growth, and healing."
 date: "May 25, 2023"

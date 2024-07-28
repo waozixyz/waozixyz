@@ -1,7 +1,7 @@
 ---
 imgSrc: "/assets/technology_crisis.jpg"
 imgAlt: "Technological Privacy Crises"
-category: "technology"
+category: "Technology & Privacy"
 title: "Technological Privacy Crises"
 desc: "Let me just make a TikTok quickly, OMG look at the food here - I gotta post it on Instagram..."
 date: "Jun 2, 2023"

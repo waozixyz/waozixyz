@@ -1,8 +1,8 @@
 ---
 imgSrc: "/assets/gods_game.jpg"
 imgAlt: "God, our reflection greeting us"
-category: "philosophy"
-title: "God's Game"
+category: "Philosophy & Politics "
+title: "The Trinity of God's Game"
 desc: "A reflection on existence, exploring themes of reality, purpose, and the future of humanity."
 date: "Jul 26, 2024"
 readTime: "4 min read"
@@ -19,8 +19,6 @@ tags:
   - spirituality
   - society
 ---
-
-# Trinity of God's game
 
 As we play the game of existence, the fractal universe spreads like a tree in full flourish. Every branch touches the edges of reality. The universe exists by being a mirror image of God. By being his reflection, we come to be, never as perfect as he.
 
@@ -59,11 +57,15 @@ In this timeline, everything is about acceleration and reaching a tech singulari
 This timeline ends in a cold blissful sleep, as we are just the bits and bytes that make up this machine. We are nothing more or less than 1s and 0s.
 
 ## Biden☠/Harris Timeline
-![Harris in the pedo Nuclear War](../assets/gods-game/harris.webp)
+![Post-modern society](../assets/gods-game/harris.webp)
 
 LGBTQIA+, Trump evil, Putin evil. Biden good. Harris good. Transgender good. Gay good.
 
-A post modern timeline put to the extreme. On verge of nuclear war with Russia. Provoking and not knowing the limits. This faction is playful and deadly. Detaching from reality, like a bad psychosis. Where anything can be anyone. And anyone can be anything. A short lived reality, as it either will engulf us in flames or sterilize us completely with their drugs and mind viruses.
+We are currently on this timeline in the west. Post modernism put to the extreme. On the verge of nuclear war with Russia. Provoking and not knowing the limits. This faction is playful and deadly. Detaching from reality, like a bad psychosis.
+
+Anyone can be anything, there are no limits.. A short lived reality, as it either will engulf us in flames or sterilize us completely with their drugs and mind viruses.
+
+On this timeline the west will experience a total utter collapse. As we are not meant to enter the next phase. When we chose left, we choose the government to "protect" us. We give our liberty away so we can be "free" and have horny furries running out. Letting degeneracy and satanitism be the norm. We fully give ourselves to Satan.
 
 Not long after we shall awaken as a new species on earth. Our human society deep under rubble. The new species will be far more mature than us. Yet by then it will already be too late...
 
