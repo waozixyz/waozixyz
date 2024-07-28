@@ -12,11 +12,12 @@ local function process_markdown_file(file)
     if not md_content then return nil end
 
     local metadata, content = utils.extract_yaml_and_content(md_content)
+
     local html_content = utils.shell(string.format("echo '%s' | md2html --github", content:gsub("'", "'\\''")))
     html_content = html_content:gsub("<!DOCTYPE html>.-<body>", ""):gsub("</body></html>", "")
     html_content = html_content:gsub("<p>(<img [^>]+>) ?(<img [^>]+>)</p>", "<div class='image-row'>%1%2</div>")
     html_content = utils.sanitize_content(html_content)
-
+    
     local url = file:gsub("%.md$", "")
     local page_content = config.writing_template
     
@@ -49,7 +50,8 @@ local function process_markdown_file(file)
         tags = metadata.tags or {},
         url = url,
         content = html_content,
-        imgsource = metadata.imgsource or "" 
+        imgSrc = metadata.imgSrc or "" ,
+        imgAlt = metadata.imgAlt or ""
     }
 end
 
@@ -67,9 +69,20 @@ local function generate_feed_item(writing, common_data, is_rss)
 
     local content = writing.content
     local cover_image = ""
-    if writing.imgsource and writing.imgsource ~= "" then
-        cover_image = string.format('    <media:thumbnail url="%s"/>\n', utils.escape_xml(writing.imgsource))
-        content = string.format('<img src="%s" alt="Cover image" />\n', utils.escape_xml(writing.imgsource)) .. content
+
+    if writing.imgSrc and writing.imgSrc ~= "" then
+        -- Use an absolute URL for the image source
+        local absolute_image_url = writing.imgSrc:match("^https?://") 
+            and writing.imgSrc 
+            or (common_data.site_url .. "/" .. writing.imgSrc:gsub("^/", ""))
+        
+        local alt_text = writing.imgAlt or "Cover image"
+        
+        cover_image = string.format('    <media:thumbnail url="%s"/>\n', utils.escape_xml(absolute_image_url))
+        local cover_img_html = string.format('<p><img src="%s" alt="%s"></p>\n', 
+            utils.escape_xml(absolute_image_url), 
+            utils.escape_xml(alt_text))
+        content = cover_img_html .. content
     end
 
     if is_rss then
@@ -87,6 +100,7 @@ local function generate_feed_item(writing, common_data, is_rss)
         cover_image = cover_image
     }
 end
+
 
 local function generate_atom_feed(processed_writings, common_data)
     local atom_entries = {}
@@ -109,6 +123,7 @@ local function generate_atom_feed(processed_writings, common_data)
         ))
     end
 
+    
     local atom_template = utils.read_file(config.templates_dir .. "/atom.xml")
     local atom_content = atom_template
     atom_content = atom_content:gsub("{{SITE_TITLE}}", common_data.site_title)
