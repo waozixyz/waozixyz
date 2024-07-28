@@ -38,7 +38,7 @@ Diverging into different timelines for us to explore. As every layer of existenc
 
 ## Trump Timeline
 
-![Trump AI accelerated](../writings/assets/gods-game/trump.webp)
+![Trump AI accelerated](../assets/writings/gods-game/trump.webp)
 
 A hero? A psyop? God's will?
 
