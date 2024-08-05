@@ -20,13 +20,15 @@ tags:
   - society
 ---
 
-As we play the game of existence, the fractal universe spreads like a tree in full flourish. Every branch touches the edges of reality. The universe exists by being a mirror image of God. By being his reflection, we come to be, never as perfect as he.
+We play a game of existence in a fractal universe. It spreads like a tree in endless flourish, branching towards infinity, never quite reaching it, as on the edge we are the existence. The flow of entropy from one state to another. We are the endless growth, the universe itself.
 
-We are every part of his existence. We are his tongue, his touch, his heart, and his mind. As we wander the world, every aspect of existence is just another reflection. That is the infinite universe. An endless alteration of reflections on every level of existence. From the heart to the stars, it is all interconnected.
+Our human existence merely a reflection of the greater self. We are layers deep, our mirror image refracted and transformed into uniquiness. One never quite like the other. Creating beauty in the process of transformation and creation.
 
-So the question is, what is the purpose of it all? Are we just playing, or are we trying to reach something? Is our endless venture on the edge of the universe, the edge of existence, just our exploration to find answers? Or are we already truly all-knowing, thus everything we do is just an endless repetition of what there already is?
+No layer is apart from itself. We are every part of his existence. We are his tongue, his touch, his heart, and his mind. As we wander the world, every aspect of our existence is mirrored on the greater playing field, even if it feels like a minature change eventually any action/karma will bring about synchronizity on a greater scale. So is the game of the infinite universe. From the heart to the stars, it is all interconnected.
 
-I believe the former. We are the explorers. In this universe, like many others, we might very well be destined to nothingness. An endless repetition, like the waves crashing onto the shores, the water dissipating into the sand. It is a breath of existence.
+What might be the purpose of this discovery we call existence? Is it all just an elaborate game we created, to venture to the edges of the universe, the edge of existence to find out what else can be? Or are we merely repeating a paradoxical cycle that will enwrap it's own creation forever and ever.
+
+I believe we are explorers, in a truly infinite world of possibilites there will always be a reality we have not yet explored, and so we play the game. Explorers of existence, destined to nothingness and beyond. An endless repetition, like the waves crashing onto the shores, the water dissipating into the sand. It is a breath of existence.
 
 All this exploring, and soon we are reaching the end stage of our universe. Touching upon a stage of no return. A cold universe, made of machines and no spiritual insight.
 
