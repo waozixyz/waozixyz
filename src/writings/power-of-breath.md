@@ -42,7 +42,7 @@ Can we live in harmony between nature, human and machine? Must one take over the
 If balanced is not kept. We are dominated by one of these systems.
 
 ## Notice your breath
-Go sit in nature, take a long deep breath and exhale. Notice the many flavours you can smell and taste. Enveloping your lungs. Repeat taking your breaths, speed up the pace. In and out, in and out. Breath in and out 30 times, and then hold on your last breath out. Hold as long as you can, sitting still, letting your mind wonder. Feeling the vibrations around you. Once you feel the urge to breath - take a deep breath in and hold for another 15 seconds. Breath out and repeat. Repeat as many times as you feel comfortable. I recommend doing at least 4 rounds. To keep track of how long you are able to hold your breath you may try my open source wim hof breathing meditation app. Inner breeze - for Inner Peace.
+Go sit in nature, take a long deep breath and exhale. Notice the many flavours you can smell and taste. Enveloping your lungs. Repeat taking your breaths, speed up the pace. In and out, in and out. Breath in and out 30 times, and then hold on your last breath out. Hold as long as you can, sitting still, letting your mind wonder. Feeling the vibrations around you. Once you feel the urge to breath - take a deep breath in and hold for another 15 seconds. Breath out and repeat. Repeat as many times as you feel comfortable. I recommend doing at least 4 rounds. To keep track of how long you are able to hold your breath you may try my open source Wim Hof breathing meditation app. Inner breeze - for Inner Peace.
 
 ![Inner Breeze Logo](../assets/inner_breeze.png)
 

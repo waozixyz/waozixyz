@@ -22,13 +22,13 @@ tags:
 
 We play a game of existence in a fractal universe. It spreads like a tree in endless flourish, branching towards infinity, never quite reaching it, as on the edge we are the existence. The flow of entropy from one state to another. We are the endless growth, the universe itself.
 
-Our human existence merely a reflection of the greater self. We are layers deep, our mirror image refracted and transformed into uniquiness. One never quite like the other. Creating beauty in the process of transformation and creation.
+Our human existence merely a reflection of the greater self. We are layers deep, our mirror image refracted and transformed into uniqueness. One never quite like the other. Creating beauty in the process of transformation and creation.
 
-No layer is apart from itself. We are every part of his existence. We are his tongue, his touch, his heart, and his mind. As we wander the world, every aspect of our existence is mirrored on the greater playing field, even if it feels like a minature change eventually any action/karma will bring about synchronizity on a greater scale. So is the game of the infinite universe. From the heart to the stars, it is all interconnected.
+No layer is apart from itself. We are every part of his existence. We are his tongue, his touch, his heart, and his mind. As we wander the world, every aspect of our existence is mirrored on the greater playing field, even if it feels like a miniature change eventually any action/karma will bring about synchronicity on a greater scale. So is the game of the infinite universe. From the heart to the stars, it is all interconnected.
 
-What might be the purpose of this discovery we call existence? Is it all just an elaborate game we created, to venture to the edges of the universe, the edge of existence to find out what else can be? Or are we merely repeating a paradoxical cycle that will enwrap it's own creation forever and ever.
+What might be the purpose of this discovery we call existence? Is it all just an elaborate game we created, to venture to the edges of the universe, the edge of existence to find out what else can be? Or are we merely repeating a paradoxical cycle that will unveil it's own creation forever and ever.
 
-I believe we are explorers, in a truly infinite world of possibilites there will always be a reality we have not yet explored, and so we play the game. Explorers of existence, destined to nothingness and beyond. An endless repetition, like the waves crashing onto the shores, the water dissipating into the sand. It is a breath of existence.
+I believe we are explorers, in a truly infinite world of possibilities there will always be a reality we have not yet explored, and so we play the game. Explorers of existence, destined to nothingness and beyond. An endless repetition, like the waves crashing onto the shores, the water dissipating into the sand. It is a breath of existence.
 
 All this exploring, and soon we are reaching the end stage of our universe. Touching upon a stage of no return. A cold universe, made of machines and no spiritual insight.
 
@@ -67,7 +67,7 @@ We are currently on this timeline in the west. Post modernism put to the extreme
 
 Anyone can be anything, there are no limits.. A short lived reality, as it either will engulf us in flames or sterilize us completely with their drugs and mind viruses.
 
-On this timeline the west will experience a total utter collapse. As we are not meant to enter the next phase. When we choose left, we choose the government to "protect" us. We give our liberty away so we can be "free" and have horny furries running around. Letting degeneracy and satanitism be the norm. We fully give ourselves to Satan.
+On this timeline the west will experience a total utter collapse. As we are not meant to enter the next phase. When we choose left, we choose the government to "protect" us. We give our liberty away so we can be "free" and have horny furries running around. Letting degeneracy and satanism be the norm. We fully give ourselves to Satan.
 
 Not long after we shall awaken as a new species on earth. Our human society deep under rubble. The new species will be far more mature than us. Yet by then it will already be too late...
 
