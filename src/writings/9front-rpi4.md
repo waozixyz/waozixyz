@@ -1,5 +1,5 @@
 ---
-imgSrc: "/assets/writings/glenda_space.png"
+imgSrc: "/assets/writings/glenda_space.jpg"
 imgAlt: "Glenda Space"
 category: "Technology & How-to"
 title: "Exploring 9front on my RPi4"
