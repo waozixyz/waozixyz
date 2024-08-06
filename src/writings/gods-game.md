@@ -61,15 +61,17 @@ This timeline ends in a cold blissful sleep, as we are just the bits and bytes t
 ## Biden☠/Harris Timeline
 ![Post-modern society](../assets/writings/gods-game/harris.webp)
 
-LGBTQIA+, Trump evil, Putin evil. Biden good. Harris good. Transgender good. Gay good.
+LGBTQIA+, Trump evil, Putin evil. Biden good. Harris good. Transgender good...
 
 We are currently on this timeline in the west. Post modernism put to the extreme. On the verge of nuclear war with Russia. Provoking and not knowing the limits. This faction is playful and deadly. Detaching from reality, like a bad psychosis.
 
 Anyone can be anything, there are no limits.. A short lived reality, as it either will engulf us in flames or sterilize us completely with their drugs and mind viruses.
 
-On this timeline the west will experience a total utter collapse. As we are not meant to enter the next phase. When we chose left, we choose the government to "protect" us. We give our liberty away so we can be "free" and have horny furries running around. Letting degeneracy and satanitism be the norm. We fully give ourselves to Satan.
+On this timeline the west will experience a total utter collapse. As we are not meant to enter the next phase. When we choose left, we choose the government to "protect" us. We give our liberty away so we can be "free" and have horny furries running around. Letting degeneracy and satanitism be the norm. We fully give ourselves to Satan.
 
 Not long after we shall awaken as a new species on earth. Our human society deep under rubble. The new species will be far more mature than us. Yet by then it will already be too late...
+
+In either timeline we are getting closer to global and civil war. Nations in chaos, an impending economic doom. We are so dependent on the centralized structures, we give power to the FEW, thinking that voting for another person will change anything. Forgetting that real change comes from within.
 
 ## Third Way
 ![Wonderkind](../assets/writings/gods-game/wonderkind.jpeg)
