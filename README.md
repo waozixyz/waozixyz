@@ -15,7 +15,7 @@ A digital reflection in the vast ocean of consciousness.
 
 ## 🌐 Connect
 
-- [Twitter](https://x.com/waozi_)
+- [X/Twitter](https://x.com/waozixyz)
 - [Email](mailto:hello@waozi.xyz)
 - [ActivityPub/Nostr](https://ditto.pub/@waozi)
 - [Telegram](https://t.me/waozixyz)
