@@ -6,12 +6,10 @@ A digital reflection in the vast ocean of consciousness.
 
 ### NaoX - Digital tools for collective growth
 - [Ukuvota](https://github.com/naoxio/ukuvota) - Collaborative score voting tool
-  - [Live at ukuvota.world](https://ukuvota.world)
-- [Inner Breeze](https://github.com/naoxio/inner_breeze) - Wim Hof meditation tracker
-  - [Live at inner-breeze.app](https://inner-breeze.app)
+  - [Live at ukuvota.world](https://ukuvota.xyz)
+- [Inner Breeze](https://github.com/naoxio/inbreeze) - Wim Hof meditation tracker
+  - [Live at inner-breeze.app](https://inbreeze.xyz)
 
-### [Alpega](https://github.com/alpega) - Crypto experiments & playful projects
-- Explore our repositories for various blockchain and fun coding projects
 
 ## 🌐 Connect
 
