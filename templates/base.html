@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Waozi - Digital Tao{% endblock %}</title>
+    <link rel="stylesheet" href="{{ get_url(path="styles.css") | safe }}">
+    <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") | safe }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+    
+    <nav class="main-nav" role="navigation">
+        <ul>
+            <li><a href="{{ get_url(path="@/_index.md") }}">Home</a></li>
+            <li><a href="{{ get_url(path="@/projects/_index.md") }}">Projects</a></li>
+            <li><a href="{{ get_url(path="@/blog/_index.md") }}">Blog</a></li>
+            <li><a href="#connect">Connect</a></li>
+        </ul>
+    </nav>
+
+    <main class="site-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer id="connect" class="site-footer fade-in">
+        <h2>Connect with me:</h2>
+        <div class="connect-grid">
+            <div class="connect-item">
+                <h3>X/Twitter</h3>
+                <a href="https://x.com/waozixyz">@waozixyz</a>
+            </div>
+            <div class="connect-item">
+                <h3>Email</h3>
+                <a href="mailto:hello@waozi.xyz">hello@waozi.xyz</a>
+            </div>
+            <div class="connect-item">
+                <h3>ActivityPub & Nostr</h3>
+                <a href="https://ditto.pub/@waozi@ditto.pub">@waozi@ditto.pub</a>
+            </div>
+            <div class="connect-item">
+                <h3>Telegram</h3>
+                <a href="https://t.me/waozixyz">@waozixyz</a>
+            </div>
+            <div class="connect-item">
+                <h3>GitHub</h3>
+                <a href="https://github.com/waozixyz">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ get_url(path="script.js") | safe }}"></script>
+</body>
+</html>

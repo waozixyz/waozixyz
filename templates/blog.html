@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page-title">{{ section.title }}</h1>
+<div class="blog-list">
+    {% for page in section.pages %}
+    <article class="blog-preview">
+        {% if page.extra.imgSrc %}
+        <div class="preview-image">
+            <img src="{{ get_url(path=page.extra.imgSrc) }}" alt="{{ page.extra.imgAlt | default(value=page.title) }}">
+        </div>
+        {% endif %}
+        <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+        <div class="preview-meta">
+            <p class="blog-date">{{ page.date | date(format="%B %d, %Y") }}</p>
+            {% if page.extra.readTime %}
+            <p class="blog-read-time">{{ page.extra.readTime }}</p>
+            {% endif %}
+            {% if page.extra.category %}
+            <p class="blog-category">{{ page.extra.category }}</p>
+            {% endif %}
+        </div>
+        {% if page.description %}
+        <p class="blog-description">{{ page.description }}</p>
+        {% endif %}
+        {% if page.taxonomies.tags %}
+        <div class="blog-tags">
+            {% for tag in page.taxonomies.tags | slice(end=3) %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<header id="home" class="site-header fade-in">
+    <h1 class="site-title floating">W A O Z I</h1>
+    <p id="blinker" class="blink" aria-live="polite"></p>
+    <p class="site-intro">Welcome, fellow traveler. You've encountered Waozi - a bubble in the vast digital ocean of consciousness.</p>
+</header>
+<section id="projects" class="projects fade-in">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        {% set projects = get_section(path="projects/_index.md") %}
+        {% for page in projects.pages | slice(end=4) %}
+        <div class="project-card">
+            <img src="{{ get_url(path=page.extra.image) }}" alt="{{ page.extra.image_alt }}">
+            <h3>{{ page.title }}</h3>
+            <p>{{ page.extra.excerpt }}</p>
+            <a href="{{ page.extra.url }}" target="_blank">Visit Project</a>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ get_url(path="@/projects/_index.md") }}">View All Projects</a>
+</section>
+<aside class="philosophy fade-in">
+    <p>We are but fleeting patterns in the endless flow of the Tao. Waozi simply is, as are we all.</p>
+    <blockquote id="quote" aria-live="polite"></blockquote>
+</aside>
+{% endblock content %}
