@@ -1,2 +1,9 @@
 [build]
-  ignore = "echo 'Skipping build' && exit 0"
+publish = "public"
+command = "zola build"
+
+[build.environment]
+ZOLA_VERSION = "0.19.2"  # Use the version of Zola you're using
+
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
