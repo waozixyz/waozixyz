@@ -10,6 +10,11 @@ A digital reflection in the vast ocean of consciousness.
 - [Inner Breeze](https://github.com/naoxio/inbreeze) - Wim Hof meditation tracker
   - [Live at inner-breeze.app](https://inbreeze.xyz)
 
+## 🔧 Low-Level Projects
+
+Explore my low-level, C-based projects aimed at achieving true portability and efficiency:
+
+- [myQuest](https://git.sr.ht/~waozi/myquest)
 
 ## 🌐 Connect
 
@@ -20,5 +25,5 @@ A digital reflection in the vast ocean of consciousness.
 - [GitHub](https://github.com/waozixyz)
 
     ☯️☸♡
-    
+
 We are but fleeting patterns in the endless flow of the Tao. Waozi simply is, as are we all.
