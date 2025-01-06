@@ -20,7 +20,7 @@ Explore my low-level, C-based projects aimed at achieving true portability and e
 
 - [X/Twitter](https://x.com/waozixyz)
 - [Email](mailto:hello@waozi.xyz)
-- [ActivityPub/Nostr](https://ditto.pub/@waozi)
+- [ActivityPub/Nostr](https://ditto.pub/@waozi@ditto.pub)
 - [Telegram](https://t.me/waozixyz)
 - [GitHub](https://github.com/waozixyz)
 
