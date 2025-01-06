@@ -6,9 +6,9 @@ A digital reflection in the vast ocean of consciousness.
 
 ### NaoX - Digital tools for collective growth
 - [Ukuvota](https://github.com/naoxio/ukuvota) - Collaborative score voting tool
-  - [Live at ukuvota.world](https://ukuvota.xyz)
+  - [Live at ukuvota.xyz](https://ukuvota.xyz)
 - [Inner Breeze](https://github.com/naoxio/inbreeze) - Wim Hof meditation tracker
-  - [Live at inner-breeze.app](https://inbreeze.xyz)
+  - [Live at inbreeze.xyz](https://inbreeze.xyz)
 
 ## 🔧 Low-Level Projects
 
