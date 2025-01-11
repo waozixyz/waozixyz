@@ -1,29 +1,33 @@
-# ☯️ Welcome to Waozi ☯️
+# Waozi: Digital Craftsmanship
 
-A digital reflection in the vast ocean of consciousness.
+A collection of thoughtfully crafted applications and tools focused on user experience and technical excellence.
 
-## 🌊 Ripples
+## Applications
 
-### NaoX - Digital tools for collective growth
-- [Ukuvota](https://github.com/naoxio/ukuvota) - Collaborative score voting tool
-  - [Live at ukuvota.xyz](https://ukuvota.xyz)
-- [Inner Breeze](https://github.com/naoxio/inbreeze) - Wim Hof meditation tracker
-  - [Live at inbreeze.xyz](https://inbreeze.xyz)
+### Community Tools
+- **[Ukuvota](https://github.com/naoxio/ukuvota)**  
+ Collaborative decision-making platform using score voting  
+ [Live at ukuvota.xyz](https://ukuvota.xyz)
 
-## 🔧 Low-Level Projects
+### Health & Wellness
+- **[Inner Breeze](https://github.com/naoxio/inbreeze)**  
+ Wim Hof breathing method tracker and meditation assistant  
+ [Live at inbreeze.xyz](https://inbreeze.xyz)
 
-Explore my low-level, C-based projects aimed at achieving true portability and efficiency:
+### Personal Development 
+- **[myQuest](https://github.com/waozixyz/myquest)**  
+ Life management system that gamifies personal growth:
+ - Habit tracking
+ - Todo management  
+ - Life overview dashboard
+ - Routine building
 
-- [myQuest](https://git.sr.ht/~waozi/myquest)
+## Connect
 
-## 🌐 Connect
+- 𝕏 [X](https://x.com/waozixyz)
+- ✉️ [Email](mailto:hello@waozi.xyz)
+- 🌐 [ActivityPub](https://ditto.pub/@waozi@ditto.pub)
+- 💬 [Telegram](https://t.me/waozixyz)
+- 🐙 [GitHub](https://github.com/waozixyz)
 
-- [X/Twitter](https://x.com/waozixyz)
-- [Email](mailto:hello@waozi.xyz)
-- [ActivityPub/Nostr](https://ditto.pub/@waozi@ditto.pub)
-- [Telegram](https://t.me/waozixyz)
-- [GitHub](https://github.com/waozixyz)
-
-    ☯️☸♡
-
-We are but fleeting patterns in the endless flow of the Tao. Waozi simply is, as are we all.
+☯️ Built with care and attention to detail
