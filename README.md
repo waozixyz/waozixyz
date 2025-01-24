@@ -15,7 +15,7 @@ A collection of thoughtfully crafted applications and tools focused on user expe
  [Live at inbreeze.xyz](https://inbreeze.xyz)
 
 ### Personal Development 
-#### **[Quest](https://github.com/naoxio/myquest)**  
+#### **[Quest](https://github.com/naoxio/quest)**  
  Life management system that gamifies personal growth:
  - Habit tracking
  - Todo management  
