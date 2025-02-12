@@ -3,12 +3,6 @@
 A collection of thoughtfully crafted applications and tools focused on user experience and technical excellence.
 
 ## Applications
-
-### Community Tools
-#### **[Ukuvota](https://github.com/naoxio/ukuvota)**  
- Collaborative decision-making platform using score voting  
- [Live at ukuvota.xyz](https://ukuvota.xyz)
-
 ### Health & Wellness
 #### **[Inner Breeze](https://github.com/naoxio/inbreeze)**  
  Wim Hof breathing method tracker and meditation assistant  
