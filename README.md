@@ -17,7 +17,6 @@ and local-first tools that stay understandable after they grow.
 | [Kryon](https://kryonlabs.com) | Native cross-platform app and game development with `.kry` source, readable C99 output, and an AI-native visual IDE. |
 | [Inner Breeze](https://inbe.waozi.xyz) | Breathing, meditation, habit tracking, and local-first progress history. |
 | [pass](https://pass.waozi.xyz) | A stateless password generator in Go, compatible with the LessPass generation algorithm. |
-| [xmrchat](https://github.com/waozixyz/xmrchat) | Message and tip with Monero. |
 
 ## Current focus
 
