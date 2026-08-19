@@ -1,31 +1,32 @@
+<div align="center">
+
 # Waozi
 
-> From complexity, back to simplicity.
+**From complexity, back to simplicity.**
 
-I make focused software: native app tooling, calm practice apps, small Go utilities,
-and local-first tools that stay understandable after they grow.
+I make quiet software: native tools, calm apps, local-first systems, and small
+utilities that stay understandable after they grow.
 
-[![website](https://img.shields.io/badge/website-waozi.xyz-222222?style=flat-square)](https://waozi.xyz/)
-[![email](https://img.shields.io/badge/email-hello@waozi.xyz-222222?style=flat-square)](mailto:hello@waozi.xyz)
-[![x](https://img.shields.io/badge/x-@waozixyz-222222?style=flat-square)](https://x.com/waozixyz)
-[![bluesky](https://img.shields.io/badge/bluesky-waozi.xyz-222222?style=flat-square)](https://bsky.app/profile/waozi.xyz)
+[waozi.xyz](https://waozi.xyz/) · [email](mailto:hello@waozi.xyz) · [x](https://x.com/waozixyz) · [bluesky](https://bsky.app/profile/waozi.xyz)
 
-## What I build
+</div>
 
-| Project | What it is |
+## Personal Projects
+
+| Project | Focus |
 | --- | --- |
-| [Kryon](https://kryonlabs.com) | Native cross-platform app and game development with `.kry` source, readable C99 output, and an AI-native visual IDE. |
-| [Inner Breeze](https://inbe.waozi.xyz) | Breathing, meditation, habit tracking, and local-first progress history. |
-| [pass](https://pass.waozi.xyz) | A stateless password generator in Go, compatible with the LessPass generation algorithm. |
+| [Kryon](https://kryonlabs.com) | Native cross-platform app and game development. |
+| [Inner Breeze](https://inbe.waozi.xyz) | Breathing, meditation, habits, and local-first progress. |
+| [pass](https://pass.waozi.xyz) | Stateless password generation in Go. |
 
-## Current focus
+## Now
 
 - Building small native apps in C and Go.
-- Keeping app data local-first and user-owned.
-- Making tools that feel quiet, direct, and repairable.
-- Preserving and learning from Plan 9, Unix, and simple systems work.
+- Designing software that feels quiet, direct, and repairable.
+- Keeping app data local-first and user-owned where it matters.
+- Learning from Plan 9, Unix, and simple systems work.
 
-## Public work
+## Elsewhere
 
 - GitHub: [github.com/waozixyz](https://github.com/waozixyz)
 - Website: [waozi.xyz](https://waozi.xyz/)
