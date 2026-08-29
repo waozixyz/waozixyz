@@ -15,7 +15,7 @@
 
 **Reach me**
 
-[hello@waozi.xyz](mailto:hello@waozi.xyz) · [waozi.xyz](https://waozi.xyz)
+[hello@waozi.xyz](mailto:hello@waozi.xyz) · [waozi.xyz](https://waozi.xyz) · [x](https://x.com/waozixyz) · [bluesky](https://bsky.app/profile/waozi.xyz)
 
 ---
 
