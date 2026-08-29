@@ -1,4 +1,14 @@
+<div align="center">
+
+<img src="lotus.png" width="170" alt="waozi lotus">
+
 # Martin Schiller · Waozi 哇子
+
+wao — to wonder. zi — child.
+
+*from complexity, back to simplicity.*
+
+</div>
 
 > **DevOps engineer & full-stack freelancer** — automation (n8n · Odoo), Linux & CI/CD, systems programming.
 > German national, working remotely from Asunción (UTC-3).
@@ -16,7 +26,3 @@
 **Reach me**
 
 [hello@waozi.xyz](mailto:hello@waozi.xyz) · [waozi.xyz](https://waozi.xyz) · [x](https://x.com/waozixyz) · [bluesky](https://bsky.app/profile/waozi.xyz)
-
----
-
-*From complexity, back to simplicity.*
