@@ -1,33 +1,22 @@
-<div align="center">
+# Martin Schiller · Waozi 哇子
 
-# Waozi
+> **DevOps engineer & full-stack freelancer** — automation (n8n · Odoo), Linux & CI/CD, systems programming.
+> German national, working remotely from Asunción (UTC-3).
 
-**From complexity, back to simplicity.**
+**Currently**
 
-I make quiet software: native tools, calm apps, local-first systems, and small
-utilities that stay understandable after they grow.
+- 🔭 Contract work: **[XMRPod](https://github.com/XMRChat/XMRPod)** for XMRChat — a Monero-tipping podcast player (AntennaPod fork) shipped on [F-Droid](https://f-droid.org/en/packages/com.xmrchat.xmrpod/) · ERP automation with n8n/Odoo at Erfolgswerk.ai
+- 🧠 Long-term: **[Kryon](https://kryonlabs.com)** — a declarative `.kry` DSL that compiles to readable, inspectable C99 for Linux, Android, WebAssembly and embedded
+- 📱 Shipped: **[Inner Breeze](https://inbe.waozi.xyz)** — open-source, local-first mindfulness app · 5.0★ on Google Play · F-Droid, Windows, Linux, Web
 
-[waozi.xyz](https://waozi.xyz/) · [email](mailto:hello@waozi.xyz) · [x](https://x.com/waozixyz) · [bluesky](https://bsky.app/profile/waozi.xyz)
+**Stack**
 
-</div>
+`Python` · `TypeScript` · `Go` · `C/C++` · `Rust` · `Kotlin/Java` · `Docker` · `CI/CD` · `Linux` · `FastAPI` · `Node.js` · `PostgreSQL` · `Android`
 
-## Personal Projects
+**Reach me**
 
-| Project | Focus |
-| --- | --- |
-| [Kryon](https://kryonlabs.com) | Native cross-platform app and game development. |
-| [Inner Breeze](https://inbe.waozi.xyz) | Breathing, meditation, habits, and local-first progress. |
-| [pass](https://pass.waozi.xyz) | Stateless password generation in Go. |
+[hello@waozi.xyz](mailto:hello@waozi.xyz) · [waozi.xyz](https://waozi.xyz)
 
-## Now
+---
 
-- Building small native apps in C and Go.
-- Designing software that feels quiet, direct, and repairable.
-- Keeping app data local-first and user-owned where it matters.
-- Learning from Plan 9, Unix, and simple systems work.
-
-## Elsewhere
-
-- GitHub: [github.com/waozixyz](https://github.com/waozixyz)
-- Website: [waozi.xyz](https://waozi.xyz/)
-- Contact: [hello@waozi.xyz](mailto:hello@waozi.xyz)
+*From complexity, back to simplicity.*
