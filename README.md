@@ -17,7 +17,7 @@ utilities that stay understandable after they grow.
 | --- | --- |
 | [Kryon](https://kryonlabs.com) | Native cross-platform app and game development. |
 | [Inner Breeze](https://inbe.waozi.xyz) | Breathing, meditation, habits, and local-first progress. |
-| [pass](https://pass.waozi.xyz) | Stateless password generation in Go. |
+| [Pass](https://pass.waozi.xyz) | Stateless password generation in Go. |
 
 ## Now
 
