@@ -16,6 +16,7 @@ wao — to wonder. zi — child.
 **Currently**
 
 - 🔭 Contract work: ERP automation with n8n/Odoo at Erfolgswerk.ai
+- 🎧 Completed: **[XMRPod](https://github.com/XMRChat/XMRPod)** — Android podcast player with Monero tipping; F-Droid inclusion and release engineering (Jun–Aug 2026)
 - 🧠 Long-term: **[Ziran](https://ziran-lang.org/)** — a general-purpose language with `.zi` source; **[Kryon](https://kryonlabs.com)** — a separate UI library written in Ziran
 - 📱 Shipped: **[Inner Breeze](https://inbe.waozi.xyz)** — open-source, local-first mindfulness app · 5.0★ on Google Play · F-Droid, Windows, Linux, Web
 - 🔐 Shipped: **[Pass](https://pass.waozi.xyz)** — stateless password generation for desktop, Android, web, and CLI
